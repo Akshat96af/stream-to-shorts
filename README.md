@@ -1,11 +1,10 @@
 <!-- stream-to-shorts by Akshat96af. Copyright (c) 2026 Akshat96af. All rights reserved. See LICENSE. -->
 <p align="center">
-  <img src="assets/banner.svg" alt="stream-to-shorts: turn livestreams into viral Shorts" width="100%" />
+  <img src="assets/banner.svg" alt="stream-to-shorts: turn livestreams into Shorts people finish watching" width="100%" />
 </p>
 
 <p align="center">
   <a href="https://github.com/Akshat96af/stream-to-shorts/stargazers"><img src="https://img.shields.io/github/stars/Akshat96af/stream-to-shorts?style=for-the-badge&logo=github&color=ffd23f&labelColor=111" alt="GitHub stars" /></a>
-  <a href="https://github.com/Akshat96af/stream-to-shorts/network/members"><img src="https://img.shields.io/github/forks/Akshat96af/stream-to-shorts?style=for-the-badge&logo=github&color=ff5d8f&labelColor=111" alt="GitHub forks" /></a>
   <a href="https://github.com/Akshat96af/stream-to-shorts/commits"><img src="https://img.shields.io/github/last-commit/Akshat96af/stream-to-shorts?style=for-the-badge&color=7c5cff&labelColor=111" alt="Last commit" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-free%20use%20%C2%B7%20no%20resale-5aa9ff?style=for-the-badge&labelColor=111" alt="License" /></a>
 </p>
@@ -13,78 +12,53 @@
 <p align="center">
   <img src="https://img.shields.io/badge/-Claude%20Code-D97757?logo=anthropic&logoColor=white" alt="Claude Code" />
   <img src="https://img.shields.io/badge/-Claude%20Desktop-D97757?logo=anthropic&logoColor=white" alt="Claude Desktop" />
-  <img src="https://img.shields.io/badge/-claude.ai%20(web)-191919?logo=anthropic&logoColor=white" alt="claude.ai" />
+  <img src="https://img.shields.io/badge/-claude.ai-191919?logo=anthropic&logoColor=white" alt="claude.ai" />
   <img src="https://img.shields.io/badge/-YouTube%20Shorts-FF0000?logo=youtubeshorts&logoColor=white" alt="YouTube Shorts" />
   <img src="https://img.shields.io/badge/-TikTok-000000?logo=tiktok&logoColor=white" alt="TikTok" />
-  <img src="https://img.shields.io/badge/-Instagram%20Reels-E4405F?logo=instagram&logoColor=white" alt="Instagram Reels" />
+  <img src="https://img.shields.io/badge/-Reels-E4405F?logo=instagram&logoColor=white" alt="Instagram Reels" />
   <img src="https://img.shields.io/badge/-Twitch-9146FF?logo=twitch&logoColor=white" alt="Twitch" />
   <img src="https://img.shields.io/badge/-Kick-53FC18?logo=kick&logoColor=black" alt="Kick" />
 </p>
 
-> [!WARNING]
-> **Official source only.** stream-to-shorts is published only at [github.com/Akshat96af/stream-to-shorts](https://github.com/Akshat96af/stream-to-shorts) by **Akshat96af**.
-> Re-uploads, renamed copies and paid bundles are unauthorised, unreviewed and may be modified. Install from this repository.
-
-<p align="center"><a href="#-install">Jump to install ↓</a></p>
-
 # stream-to-shorts⁠​‌​​​​​‌​‌‌​‌​‌‌​‌‌‌​​‌‌​‌‌​‌​​​​‌‌​​​​‌​‌‌‌​‌​​​​‌‌‌​​‌​​‌‌​‌‌​​‌‌​​​​‌​‌‌​​‌‌​⁠
-
-Your agent can already cut video. **stream-to-shorts gives it the judgment of a professional clipper**: it learns
-what you want, finds the moments viewers actually rewatched, writes a hook for the first frame, edits the Short with
-captions, music and effects, checks every frame, and hands you upload-ready videos with titles and hashtags.
-
-```text
-ask -> find the moment -> check it like an editor -> render -> quality check -> deliver -> learn from the views
-```
-
-You install it once. From then on, one sentence does the whole job: *"make 6 Shorts from this stream"*.
-
-> Pick the moment a stranger can't scroll past. Everything else is automated.
-
-| Included | Count | What it gives you |
-|---|--:|---|
-| Moment finders | 5 | Most-replayed graph, chat replay, live chat spikes, voice + webcam reactions, live audio spikes |
-| Layouts | 3 | Facecam on top, full width, centre crop: at 1080p, 1440p or 4K, 30 or 60 fps |
-| Caption styles | 3 × 6 colours | Word-pop, clean, or none; upper or normal case; low or middle position |
-| Lessons learned | 34 | Real mistakes from a working clipping channel, turned into rules the agent follows |
-| Agent briefs | 3 | Editor, uploader and analyst roles for multi-agent runs |
-| Safety tools | 4 | Content filter, 8-frame QC sheet, segment blur, privacy scanner |
-| Optional extras | 2 | Live dashboard (play, delete, restore) and a YouTube Studio uploader with safety rules |
-
-<p align="center">
-  <a href="https://www.star-history.com/#Akshat96af/stream-to-shorts&Date">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=Akshat96af/stream-to-shorts&type=Date&theme=dark" />
-      <img src="https://api.star-history.com/svg?repos=Akshat96af/stream-to-shorts&type=Date" alt="Star history of stream-to-shorts" width="80%" />
-    </picture>
-  </a>
-</p>
-
-## 📦 Install
-
-One command, no cloning:
 
 ```bash
 npx skills add Akshat96af/stream-to-shorts
 ```
 
-Then start a new session in your agent and say what you want. On its first run the skill checks your PC (ffmpeg,
-Python and the speech model) and tells you exactly what, if anything, is missing.
+Hand your agent a four-hour stream and get back Shorts people actually finish. stream-to-shorts finds the moments
+viewers rewound, writes a hook for the first frame, cuts and captions the clip, checks every frame, and gives you
+the title and hashtags to post it with. One sentence starts it: *"make 6 Shorts from this stream."*
+
+<p align="center"><img src="assets/flow.svg" alt="ask, find, check, render, quality check, deliver, learn" width="100%" /></p>
+
+| Included | Count | What you get |
+|---|--:|---|
+| Moment finders | 5 | Most-replayed graph, chat replay, live chat spikes, voice + webcam reactions, live audio spikes |
+| Layouts | 3 | Facecam on top, full width or centre crop, rendered at 1080p, 1440p or 4K |
+| Caption looks | 3 × 6 colours | Word-pop, clean or none, in upper or normal case, low or middle on screen |
+| Lessons learned | 34 | Mistakes from a real clipping channel, written as rules the agent follows |
+| Agent briefs | 3 | Editor, uploader and analyst roles for multi-agent runs |
+| Safety tools | 4 | Content filter, 8-frame QC sheet, segment blur, privacy scanner |
+| Optional extras | 2 | Live dashboard with play / delete / restore, and a YouTube Studio uploader |
+
+## 📦 Install
 
 | Where you use it | How to install |
 |---|---|
 | **Claude Code / Claude Desktop** | `npx skills add Akshat96af/stream-to-shorts` |
-| **claude.ai and other chat apps** (no install, plans clips from transcripts) | download [`stream-to-shorts-web.zip`](stream-to-shorts-web.zip) and upload it in your skill settings |
+| **claude.ai and other chat apps** (plans clips from transcripts, nothing to install) | download [`stream-to-shorts-web.zip`](stream-to-shorts-web.zip) and upload it in your skill settings |
 | **Manual** | download the latest release and unzip it into your agent's skills folder |
 
+On the first run the skill checks your PC for ffmpeg, Python and the speech model, and tells you what is missing, if anything.
+
 > [!TIP]
-> Install it once per agent. Installing the same skill twice in one agent creates duplicates; installing it in two
-> different agents is fine.
+> Install it once per agent. Two copies in the same agent show up twice; one copy in each of two agents is fine.
 
 ## ▶️ Start using it
 
-You talk; the skill does the rest. The first time, it asks a few quick questions about your channel, the clips you
-want, your caption style and quality, then remembers the answers.
+The first time, the skill asks a few short questions: your channel, the clips you want, the caption look, the quality.
+It remembers the answers, so later sessions start straight away.
 
 | What you want | Say this |
 |---|---|
@@ -103,13 +77,13 @@ want, your caption style and quality, then remembers the answers.
 
 ### What every Short gets
 
-- **Hook on frame 1**: written from what is seen and said, never generic
-- **Word-pop captions** that follow the voice, filtered for misheard lyrics and repeats
-- **Facecam on top, gameplay below** whenever the streamer is on camera
-- **Beat drop on the payoff**: your music starts so its drop lands on the moment
-- **Punch-in, shake, flash and SFX** on the peak; voice first, music ducked under it
-- **Automatic QC** (loudness, peaks, black frames, silence) plus an 8-frame check sheet
-- **Title, description and 12-15 hashtags** that credit the source creator
+- A hook on the first frame, written from what is on screen and what is said
+- Word-pop captions that follow the voice, with misheard lyrics and stuck repeats removed
+- The streamer's camera on top and the gameplay below whenever there is a webcam
+- Your music, started so its drop lands on the payoff
+- A punch-in, a shake and a flash on the peak, with the voice kept above the music
+- Automatic QC for loudness, peaks, black frames and silence, plus an 8-frame check sheet
+- A title, a description and 12-15 hashtags that credit the creator
 
 </td>
 </tr>
@@ -117,19 +91,15 @@ want, your caption style and quality, then remembers the answers.
 
 ## ⚡ How it works
 
-<p align="center"><img src="assets/pipeline.svg" alt="Source, find, check, render, deliver" width="100%" /></p>
-
-<details>
-<summary><strong>The five steps in detail</strong></summary>
-
 | | Step | What happens |
 |:-:|---|---|
-| 1 | **Asks first** | Learns your channel, platform, the clips you want, captions, quality and pace, or picks them up from the chat. |
-| 2 | **Finds the moments** | Ranks what viewers rewatched (most-replayed graph), chat explosions, and real voice + face reactions. |
-| 3 | **Checks like an editor** | Looks at the frames and reads the transcript: premise, payoff, a real reaction, nothing unsafe, nothing repeated. |
-| 4 | **Renders** | At the size your PC and source allow, with hook, captions, layout, music, SFX and effects, then runs QC. |
-| 5 | **Delivers** | Hands you the Shorts and an upload kit, or uploads them for you if you opt in. |
-</details>
+| 1 | **Ask** | Learns your channel, platform, the clips you want, captions, quality and pace, or reads them from the chat. |
+| 2 | **Find** | Ranks what viewers rewatched, where chat exploded, and where the streamer's face and voice reacted. |
+| 3 | **Check** | Looks at the frames and reads the transcript: is there a setup, a payoff and a real reaction, and is it safe to post? |
+| 4 | **Render** | Builds the Short at the size your PC and source allow, with hook, captions, layout, music, SFX and effects. |
+| 5 | **QC** | Measures loudness, peaks, black frames and silence, then shows you 8 frames from the finished Short. |
+| 6 | **Deliver** | Hands you the Shorts and an upload kit, or uploads them for you if you asked it to. |
+| 7 | **Learn** | Compares views and retention by hook, layout and length, and changes one thing at a time. |
 
 <details>
 <summary><strong>Layouts</strong></summary>
@@ -138,7 +108,7 @@ want, your caption style and quality, then remembers the answers.
 </details>
 
 <details>
-<summary><strong>Settings you can change by just asking</strong></summary>
+<summary><strong>Settings you can change by asking</strong></summary>
 
 | Setting | Options | Default |
 |---|---|---|
@@ -155,96 +125,128 @@ want, your caption style and quality, then remembers the answers.
 
 | Without it | With stream-to-shorts |
 |---|---|
-| Clips picked by loudness, full of cutscenes and menus | Moments viewers **rewatched**, with a real reaction and a payoff |
-| Generic "you won't believe this" hooks | A hook written per clip from what is **seen and said** |
-| Captions that quote song lyrics or loop words | Lyrics and loops filtered, captions checked before render |
-| The same mistakes on every new channel | **34 lessons** from a real clipping channel, applied every time |
-| Fixed 1080p | 1080p to **4K**, matched to your PC and source |
-| Files uploaded to someone's cloud | **100 % local**: nothing leaves your PC |
-| No idea why a Short flopped | Views and retention compared per hook, layout and length |
+| Clips picked by volume, full of cutscenes and menus | Moments viewers rewatched, with a real reaction and a payoff |
+| "You won't believe this" hooks on every clip | A hook written for each clip from what is seen and said |
+| Captions that quote song lyrics or stutter on one word | Lyrics and loops filtered out, captions read before render |
+| The same beginner mistakes on every new channel | 34 rules learned the hard way, applied every time |
+| One fixed resolution | 1080p to 4K, matched to your PC and your source |
+| Your footage uploaded to someone's cloud | Everything runs on your PC |
+| No idea why a Short flopped | Views and retention compared by hook, layout and length |
 
 ## 📁 What's inside
 
-```text
-stream-to-shorts/
-|-- SKILL.md                  # the workflow your agent follows
-|-- references/               # rules, 34 lessons learned, intake questions, agent briefs, troubleshooting
-|-- scripts/                  # moment finders, renderer, QC, dashboard, privacy scanner, optional uploader
-|-- assets/                   # artwork and the bring-your-own-audio guide
-|-- stream-to-shorts-web.zip  # no-install edition for chat apps
-|-- config.example.json       # every setting with its default
-```
+<table>
+<tr>
+<td width="33%" valign="top">
+
+**🧠 SKILL.md**<br/>
+<sub>The workflow your agent follows, from the first question to the posted Short.</sub>
+
+</td>
+<td width="33%" valign="top">
+
+**📚 references/**<br/>
+<sub>Editorial rules, the 34 lessons, intake questions, rendering and upload guides, agent briefs, troubleshooting.</sub>
+
+</td>
+<td width="33%" valign="top">
+
+**🎬 scripts/**<br/>
+<sub>Moment finders, the renderer, QC, the dashboard, the privacy scanner and the optional uploader.</sub>
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**🌐 stream-to-shorts-web.zip**<br/>
+<sub>The no-install edition for claude.ai and other chat apps.</sub>
+
+</td>
+<td valign="top">
+
+**🎨 assets/**<br/>
+<sub>The artwork in this page and the guide to adding your own music and SFX.</sub>
+
+</td>
+<td valign="top">
+
+**⚙️ config.example.json**<br/>
+<sub>Every setting with its default, for anyone who prefers files to asking.</sub>
+
+</td>
+</tr>
+</table>
 
 <details>
-<summary><strong>Annotated scripts</strong></summary>
+<summary><strong>Every script, one line each</strong></summary>
 
-```text
-scripts/
-|-- vod.py            # finished streams: most-replayed graph + chat replay + loudness -> top moments at 1080p+
-|-- scan.py           # fast ranking of a long recording (about 90 s per 2 h), nothing cut until you choose
-|-- moments.py        # voice + webcam-motion moments in a recording, cut and transcribed
-|-- clipwatcher.py    # records a live stream and cuts on chat spikes
-|-- audiowatch.py     # live streams without readable chat: cuts on loud reactions
-|-- cut.py            # one moment from any file or timestamp
-|-- finalize.py       # the renderer: layout, captions, hook, music, SFX, effects, QC
-|-- blur_segment.py   # rescue a good clip by blurring one stretch
-|-- music.py          # starts each track so its drop lands on the moment
-|-- check_setup.py    # first-run check of ffmpeg, Python and models
-|-- privacy_scan.py   # finds personal data before you share a folder
-|-- dash.py, status.* # optional local dashboard
-|-- uploader/         # optional YouTube Studio uploader
-```
+| Script | What it does |
+|---|---|
+| `vod.py` | Finished streams: most-replayed graph, chat replay and loudness, then cuts the top moments at full quality |
+| `scan.py` | Ranks a long recording in about 90 seconds per 2 hours without cutting anything |
+| `moments.py` | Finds voice + webcam-motion moments in a recording, cuts and transcribes them |
+| `clipwatcher.py` | Records a live stream and cuts when chat spikes |
+| `audiowatch.py` | Live streams whose chat you cannot read: cuts on loud reactions |
+| `cut.py` | Cuts one moment from any file or timestamp |
+| `finalize.py` | The renderer: layout, captions, hook, music, SFX, effects and QC |
+| `blur_segment.py` | Saves a good clip by blurring one stretch of it |
+| `music.py` | Starts each track so its drop lands on the moment |
+| `check_setup.py` | First-run check for ffmpeg, Python and the speech model |
+| `privacy_scan.py` | Finds personal data before you share a folder |
+| `dash.py` · `status.*` | The optional local dashboard |
+| `uploader/` | The optional YouTube Studio uploader |
 </details>
 
 ## 🔒 Security and privacy
 
-- Runs **entirely on your computer**. No accounts, no telemetry, nothing uploaded unless you turn the uploader on.
-- The dashboard listens on `127.0.0.1` only; the uploader uses your own signed-in browser and never handles passwords.
-- `privacy_scan.py` checks any folder for e-mails, channel ids, keys and names before you share it.
-- Report a vulnerability privately: see [SECURITY.md](SECURITY.md).
+- It runs on your computer. There are no accounts and no telemetry, and nothing is uploaded unless you turn the uploader on.
+- The dashboard only listens on `127.0.0.1`. The uploader uses your own signed-in browser and never sees a password.
+- `privacy_scan.py` checks a folder for e-mail addresses, channel ids, keys and your name before you share it.
+- The only official copy lives at [github.com/Akshat96af/stream-to-shorts](https://github.com/Akshat96af/stream-to-shorts). Report a vulnerability privately through [SECURITY.md](SECURITY.md).
 
 ## ❓ FAQ
 
 <details><summary><b>Does it need a GPU, a paid API or a powerful PC?</b></summary>
 
-No. It runs on a normal PC with free tools and scales with your hardware: 1080p on a laptop, 1440p or 4K on a stronger
-machine. An Intel or NVIDIA encoder makes rendering faster.
+No. It runs on free tools and scales with your hardware: 1080p on a laptop, 1440p or 4K on a stronger machine. An
+Intel or NVIDIA encoder makes rendering faster.
 </details>
 
 <details><summary><b>Which agents does it work with?</b></summary>
 
-Claude Code and Claude Desktop get the full edition. claude.ai and other chat apps use the web edition, which plans
-clips from transcripts and timestamps without installing anything.
+Claude Code and Claude Desktop run the full edition. claude.ai and other chat apps use the web edition, which plans
+clips from transcripts and timestamps.
 </details>
 
 <details><summary><b>Does it upload by itself?</b></summary>
 
-Only if you ask. By default you get the Shorts plus a ready-to-paste upload kit. The optional uploader is private by
-default, respects a daily cap, waits for the platform's checks and never clicks "publish anyway".
+Only if you ask. By default you get the Shorts and an upload kit. The uploader keeps videos private unless you say
+otherwise, stays under a daily cap, waits for the platform's checks, and never clicks "publish anyway".
 </details>
 
 <details><summary><b>Can I clip any streamer?</b></summary>
 
-Clip creators who allow it and always credit them. The skill keeps a list of creator rules and puts the credit and
-source link in every description.
+Clip creators who allow it, and credit them. The skill keeps a list of creator rules and puts the credit and source
+link in every description.
 </details>
 
 <details><summary><b>Is music included?</b></summary>
 
-No. Add your own licensed tracks and sound effects; Shorts also work with the streamer's voice only.
+No. Add your own licensed tracks and sound effects. Shorts also work with just the streamer's voice.
 </details>
 
 <details><summary><b>Something went wrong</b></summary>
 
-Tell your agent what happened; the skill carries a troubleshooting guide. Or open an
+Tell your agent what happened; the skill ships with a troubleshooting guide. You can also open an
 [issue](https://github.com/Akshat96af/stream-to-shorts/issues/new/choose).
 </details>
 
 ## 🧭 Background
 
-stream-to-shorts was built by **Akshat96af** while running a real clipping channel: live streams recorded, moments
-cut, Shorts edited and posted around the clock. Every rule in it, from "never quote song lyrics as speech" to "wait
-for the platform's checks before publishing", comes from a mistake made once and never repeated.
+I built stream-to-shorts while running a clipping channel: recording streams, cutting moments, editing and posting
+Shorts around the clock. Every rule in it comes from a mistake I made once, like quoting a song on the radio as if the
+streamer had said it, or publishing before the platform finished its copyright check.
 
 Release notes: [CHANGELOG.md](CHANGELOG.md).
 

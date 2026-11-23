@@ -7,7 +7,7 @@ Fingerprints of the original release (SHA-256), recorded 2026-11-23. Together wi
 history they show the original authorship. A copy published elsewhere with these files, or close variants of them,
 is a copy of this work. The files also carry an invisible authorship mark (see LICENSE section 7).
 
-Release fingerprint (hash of the table below): `74f5a40d81317df186658f5be2968b47116f9585d9b166f3680ae2eb25f5dbd7`
+Release fingerprint (hash of the table below): `bbfe17fefb95e6495a4cc177377042337412e7fe14155a9f266272b2531132a9`
 
 | File | SHA-256 |
 |---|---|
@@ -16,6 +16,7 @@ Release fingerprint (hash of the table below): `74f5a40d81317df186658f5be2968b47
 | `.github/ISSUE_TEMPLATE/config.yml` | `35f79009d5e6b49bf50779fe1a5f686f9fcccc6302c54af06e3e584ff066ad84` |
 | `.github/ISSUE_TEMPLATE/feature_request.yml` | `fb068b33db3f235677b2b5561c7f16e303cca4a43dd49aa8700ee3ccde0547af` |
 | `assets/banner.svg` | `1034cbbbadce6ea8a5efbec84cddcfc112ab9a191534ea364e5427cbe8f6438e` |
+| `assets/flow.svg` | `70e5ce30ca3906b486b58be92138293ae6a5dcc0ccea7d8ab8096485aabc06ae` |
 | `assets/layouts.svg` | `3b5dbed5ccbdfa15081ed4228162896da257b445e224a1d1ae697f70f0cb0bad` |
 | `assets/learnings-template.md` | `a37739750f2907fa87b6a1e6ba30cab829677e0ce4829b0f8adade80ca914ab7` |
 | `assets/pipeline.svg` | `5e5456654f1b1733740c11254ab05dddfe5c2190f0c12dce2570b07a0bf1b09a` |
@@ -24,7 +25,7 @@ Release fingerprint (hash of the table below): `74f5a40d81317df186658f5be2968b47
 | `CHANGELOG.md` | `c9ea9b090e394393f19a5633f9bffb425e777267f5c85152d97ddf90930ab02b` |
 | `config.example.json` | `995e053544f05ac343706d61935f1032d60ceb2ceb1818b444d78cb75f76190f` |
 | `LICENSE` | `48b0d1b3cc9e27e9d0589c7ab81e87f7d4cb53f783d88b2b1e62c84fa4c851cb` |
-| `README.md` | `c55fbf6694ea72eaf6bd8b10ffc26c63d48ca252735e17b7fe32c045ccd2e9a1` |
+| `README.md` | `2e316d7062693c37213778d2547bed9a59012623e7c7623f5f0c57247d519804` |
 | `references/agents/analyst.md` | `62d25cd60169ee0182a69ea5ede2be528c85d3defa148f739992cedd21ee6f88` |
 | `references/agents/editor.md` | `7aa82ace2726c6412a4772c604fd033c79dbafa19a5b64bc3a4ef7a3072cfa6b` |
 | `references/agents/uploader.md` | `d395456fe525cf88aabcf02fb506a079fbb37986d8c1462c5f4812ef35fb495f` |
