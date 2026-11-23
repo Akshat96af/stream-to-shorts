@@ -11,7 +11,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/-Claude%20Code-D97757?logo=anthropic&logoColor=white" alt="Claude Code" />
-  <img src="https://img.shields.io/badge/-Claude%20Desktop-D97757?logo=anthropic&logoColor=white" alt="Claude Desktop" />
+  <img src="https://img.shields.io/badge/-Antigravity-4285F4?logo=google&logoColor=white" alt="Antigravity" />
   <img src="https://img.shields.io/badge/-claude.ai-191919?logo=anthropic&logoColor=white" alt="claude.ai" />
   <img src="https://img.shields.io/badge/-YouTube%20Shorts-FF0000?logo=youtubeshorts&logoColor=white" alt="YouTube Shorts" />
   <img src="https://img.shields.io/badge/-TikTok-000000?logo=tiktok&logoColor=white" alt="TikTok" />
@@ -46,14 +46,9 @@ the title and hashtags to post it with. One sentence starts it: *"make 6 Shorts 
 
 | Where you use it | How to install |
 |---|---|
-| **Claude Code / Claude Desktop** | `npx skills add Akshat96af/stream-to-shorts` |
+| **Claude Code, Claude Desktop, Antigravity** | `npx skills add Akshat96af/stream-to-shorts` |
 | **claude.ai and other chat apps** (plans clips from transcripts, nothing to install) | download [`stream-to-shorts-web.zip`](stream-to-shorts-web.zip) and upload it in your skill settings |
 | **Manual** | download the latest release and unzip it into your agent's skills folder |
-
-On the first run the skill checks your PC for ffmpeg, Python and the speech model, and tells you what is missing, if anything.
-
-> [!TIP]
-> Install it once per agent. Two copies in the same agent show up twice; one copy in each of two agents is fine.
 
 ## ▶️ Start using it
 

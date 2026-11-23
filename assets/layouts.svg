@@ -29,7 +29,7 @@
   @keyframes glint{0%,60%{transform:translateX(-400px)}100%{transform:translateX(900px)}}
 
   .l{font-family:'Segoe UI','SF Pro Display',Inter,Roboto,Helvetica,Arial,sans-serif;font-weight:900;font-size:16px;fill:#fff;letter-spacing:1px} .m{font-family:'Segoe UI','SF Pro Display',Inter,Roboto,Helvetica,Arial,sans-serif;font-weight:600;font-size:13px;fill:#9aa3ba}
-  .bob{animation:bob 4s ease-in-out infinite} @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+  .bob{animation:none} @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
 </style>
 <rect width="640" height="400" rx="24" fill="url(#lbg)"/>
 <g transform="translate(40,26)"><g class="bob" style="animation-delay:0.0s"><g transform="scale(.42)">

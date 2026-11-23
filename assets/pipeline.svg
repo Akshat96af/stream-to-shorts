@@ -11,7 +11,7 @@
   .flow{animation:dash .8s linear infinite} .lift{animation:lift 3s ease-in-out infinite}
   .dot{animation:pulse 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
   @keyframes dash{to{stroke-dashoffset:-12}}
-  @keyframes lift{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+  @keyframes lift{0%,100%{opacity:1}50%{opacity:.78}}
   @keyframes pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.8);opacity:.4}}
 </style>
 <rect width="1220" height="260" rx="24" fill="url(#pbg)"/>

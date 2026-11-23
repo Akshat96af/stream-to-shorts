@@ -7,7 +7,7 @@ Fingerprints of the original release (SHA-256), recorded 2026-11-23. Together wi
 history they show the original authorship. A copy published elsewhere with these files, or close variants of them,
 is a copy of this work. The files also carry an invisible authorship mark (see LICENSE section 7).
 
-Release fingerprint (hash of the table below): `bbfe17fefb95e6495a4cc177377042337412e7fe14155a9f266272b2531132a9`
+Release fingerprint (hash of the table below): `151e6e72fabef58be0c59c08eb7aa61e0f2f2574c77b6a291e56a7c661377776`
 
 | File | SHA-256 |
 |---|---|
@@ -15,17 +15,17 @@ Release fingerprint (hash of the table below): `bbfe17fefb95e6495a4cc17737704233
 | `.github/ISSUE_TEMPLATE/bug_report.yml` | `5725de3d70c11fa625613f53396409b6b7723b482e55def2e8c43ba662b1a9d1` |
 | `.github/ISSUE_TEMPLATE/config.yml` | `35f79009d5e6b49bf50779fe1a5f686f9fcccc6302c54af06e3e584ff066ad84` |
 | `.github/ISSUE_TEMPLATE/feature_request.yml` | `fb068b33db3f235677b2b5561c7f16e303cca4a43dd49aa8700ee3ccde0547af` |
-| `assets/banner.svg` | `1034cbbbadce6ea8a5efbec84cddcfc112ab9a191534ea364e5427cbe8f6438e` |
-| `assets/flow.svg` | `70e5ce30ca3906b486b58be92138293ae6a5dcc0ccea7d8ab8096485aabc06ae` |
-| `assets/layouts.svg` | `3b5dbed5ccbdfa15081ed4228162896da257b445e224a1d1ae697f70f0cb0bad` |
+| `assets/banner.svg` | `a5c3352774406cc155a3056f3a4613166dccb266aa642dce2d2e009e05907b81` |
+| `assets/flow.svg` | `f1e9defb3ca386603fad4fb5154f8b5ec020a91a5f0fed514a0fc46d20951db2` |
+| `assets/layouts.svg` | `74108cf2d8473882213df11e5be155c65882923ebbafcda53dd4b71d87efeb7b` |
 | `assets/learnings-template.md` | `a37739750f2907fa87b6a1e6ba30cab829677e0ce4829b0f8adade80ca914ab7` |
-| `assets/pipeline.svg` | `5e5456654f1b1733740c11254ab05dddfe5c2190f0c12dce2570b07a0bf1b09a` |
+| `assets/pipeline.svg` | `9070585b2457e8b3111414b1be886746533618cea394af94a67b4a294aef3fe4` |
 | `assets/preview.svg` | `dd62b62c257aac2f3229bfbdfa7344d9e2a3b861dd90d8ea406ab614a02468ac` |
 | `assets/README.md` | `74963cba237af0a947e24576360b884507e55e797cff65ced75a90a6ee9d9a4d` |
 | `CHANGELOG.md` | `c9ea9b090e394393f19a5633f9bffb425e777267f5c85152d97ddf90930ab02b` |
 | `config.example.json` | `995e053544f05ac343706d61935f1032d60ceb2ceb1818b444d78cb75f76190f` |
 | `LICENSE` | `48b0d1b3cc9e27e9d0589c7ab81e87f7d4cb53f783d88b2b1e62c84fa4c851cb` |
-| `README.md` | `2e316d7062693c37213778d2547bed9a59012623e7c7623f5f0c57247d519804` |
+| `README.md` | `746c3eb7d17e3ddfdda2ea66fc2a15d939a37cb2d6fe8f84573b2d0242cc9db4` |
 | `references/agents/analyst.md` | `62d25cd60169ee0182a69ea5ede2be528c85d3defa148f739992cedd21ee6f88` |
 | `references/agents/editor.md` | `7aa82ace2726c6412a4772c604fd033c79dbafa19a5b64bc3a4ef7a3072cfa6b` |
 | `references/agents/uploader.md` | `d395456fe525cf88aabcf02fb506a079fbb37986d8c1462c5f4812ef35fb495f` |
