@@ -7,7 +7,7 @@ Fingerprints of the original release (SHA-256), recorded 2026-11-23. Together wi
 history they show the original authorship. A copy published elsewhere with these files, or close variants of them,
 is a copy of this work. The files also carry an invisible authorship mark (see LICENSE section 7).
 
-Release fingerprint (hash of the table below): `e1e7202df1dd147bb6d4d0ce9da6a68cef80a33dfb3a74a841a500898201734b`
+Release fingerprint (hash of the table below): `74f5a40d81317df186658f5be2968b47116f9585d9b166f3680ae2eb25f5dbd7`
 
 | File | SHA-256 |
 |---|---|
@@ -24,7 +24,7 @@ Release fingerprint (hash of the table below): `e1e7202df1dd147bb6d4d0ce9da6a68c
 | `CHANGELOG.md` | `c9ea9b090e394393f19a5633f9bffb425e777267f5c85152d97ddf90930ab02b` |
 | `config.example.json` | `995e053544f05ac343706d61935f1032d60ceb2ceb1818b444d78cb75f76190f` |
 | `LICENSE` | `48b0d1b3cc9e27e9d0589c7ab81e87f7d4cb53f783d88b2b1e62c84fa4c851cb` |
-| `README.md` | `5852df32e57c519024e8cc812fbfc36634ed603ba0e73a474bdcbc7134653212` |
+| `README.md` | `c55fbf6694ea72eaf6bd8b10ffc26c63d48ca252735e17b7fe32c045ccd2e9a1` |
 | `references/agents/analyst.md` | `62d25cd60169ee0182a69ea5ede2be528c85d3defa148f739992cedd21ee6f88` |
 | `references/agents/editor.md` | `7aa82ace2726c6412a4772c604fd033c79dbafa19a5b64bc3a4ef7a3072cfa6b` |
 | `references/agents/uploader.md` | `d395456fe525cf88aabcf02fb506a079fbb37986d8c1462c5f4812ef35fb495f` |
