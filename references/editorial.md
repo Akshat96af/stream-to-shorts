@@ -10,8 +10,8 @@
    A straight-faced description is not a reaction.
 4. **Stands alone.** Never open on "and / but / so", on an answer without its question, or on "he" with no name.
    Never cut mid-sentence.
-5. **No spoilers or leaks** (story endings, unreleased footage), **no personal information** (addresses, phone
-   numbers, faces of bystanders who did not agree).
+5. **No spoilers or leaks** (story endings, unreleased footage); respect the creator's `content_filter` choice
+   (safety-and-rights.md) and keep other people's private data out.
 6. **Fresh.** Not the same joke or moment as another Short; at most 2 Shorts per source video.
 7. **Length follows the story**: one complete beat, usually 25-60 s. Too short reveals nothing; never cut the payoff
    to hit a number.

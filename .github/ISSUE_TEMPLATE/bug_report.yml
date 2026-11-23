@@ -1,0 +1,15 @@
+# stream-to-shorts by Akshat96af
+name: Bug report
+description: Something did not work as described
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes: {label: What happened, description: "What you ran and what you expected"}
+    validations: {required: true}
+  - type: textarea
+    id: output
+    attributes: {label: Output or error, description: "Paste the last lines of output. Run privacy_scan.py on anything you paste.", render: text}
+  - type: input
+    id: env
+    attributes: {label: Environment, placeholder: "Windows 11 / macOS 15 / Ubuntu 24.04, Python 3.12, ffmpeg 7"}

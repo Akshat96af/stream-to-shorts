@@ -1,6 +1,6 @@
 ---
 name: stream-to-shorts
-description: Turns livestreams, finished stream VODs or any long gameplay video into finished, upload-ready vertical Shorts (1080x1920) with a hook title on frame 1, animated word captions, a facecam-on-top layout, beat-matched music, SFX and quality checks, plus SEO titles, descriptions and hashtags, an optional YouTube Studio uploader and a live monitoring dashboard. Use this whenever someone wants to clip a stream, make Shorts, Reels or TikToks from a Twitch, YouTube or Kick stream or a local video, find the best moments of a long video, auto-post clips, run a clipping channel, or fix clips that are not getting views, even if they never say "skill" or "Shorts".
+description: Turns livestreams, finished stream VODs or any long gameplay video into finished, upload-ready vertical Shorts (1080p up to 4K) with a hook title on frame 1, animated word captions, a facecam-on-top layout, beat-matched music, SFX and quality checks, plus SEO titles, descriptions and hashtags, an optional YouTube Studio uploader and a live monitoring dashboard. Use this whenever someone wants to clip a stream, make Shorts, Reels or TikToks from a Twitch, YouTube or Kick stream or a local video, find the best moments of a long video, auto-post clips, run a clipping channel, or fix clips that are not getting views, even if they never say "skill" or "Shorts".
 license: Proprietary. Copyright (c) 2026 Akshat96af. All rights reserved. See LICENSE.
 metadata:
   author: Akshat96af
@@ -63,6 +63,9 @@ Pick the path that matches the source. Details and pitfalls: `references/sources
 - **Live channel**: record with `clipwatcher.py` (chat spikes) and scan the growing recording with `moments.py`
   (streamer voice plus webcam motion). Live streams have no replay graph.
 - **Local file, or a timestamp someone gave you**: `python <skill>/scripts/cut.py <file> <H:MM:SS> <streamer>`.
+- **A long local recording**: rank it first with `python <skill>/scripts/scan.py <file> <name> --cam x,y,w,h --sheets`
+  (or `--full` without a webcam): about 90 s per 2 hours, nothing is cut until you choose.
+- **A live stream without readable chat**: `audiowatch.py <growing recording> <name>` cuts on loud reactions.
 - AI summaries ("ask about this video" panels and similar) invent quotes and scenes. Use their timestamps only as
   leads and verify every one with frames and the transcript.
 
@@ -73,7 +76,8 @@ LOOK at every frame sheet and READ the transcript before you keep a moment. Keep
   premise, menus, loading screens, long driving and plain cutscenes are not moments.
 - **A real reaction**: the streamer's face or voice reacts to what is on screen. Prefer this over game dialogue.
 - **Stands alone**: no context needed; it never opens on "and/but/so" or an unexplained "he".
-- **Safe**: no nudity or sexual content in ANY frame (blur that segment or skip the clip), no personal information.
+- **Safe for their channel**: follows the content filter they chose (`strict` by default: blur or skip any frame
+  with nudity or sexual content; see `references/safety-and-rights.md`), and no one else's private data.
 - **Fresh**: not the same moment or the same joke as a Short already made (check `render/meta/`).
 If nothing in a window clears the bar, say so and look elsewhere. Never pad with a weak clip, and never go quiet.
 
@@ -91,8 +95,8 @@ python <skill>/scripts/finalize.py clips/<name>.mp4 --layout facecam --cam x,y,w
 
 ## Step 5 - Check (never skip)
 Open the printed QC sheet (`render/qc/<stem>.qc.jpg`, 8 frames). Fix and re-render when: the hook does not match
-the picture, any frame shows 18+ content, captions cover a face, the first frame is a menu or black, the ending is
-a logo or dead air, or the QC json says not ok. Two retries at most, then drop the clip and say why.
+the picture, a frame breaks the chosen content filter, captions cover a face, the first frame is a menu or black, the ending is
+a logo or dead air, or the QC json says not ok. Two retries at most, then drop the clip and say why. One bad stretch in a good clip: `blur_segment.py`.
 
 ## Step 6 - Package or upload
 - **Upload kit (default)**: for each Short give a title, description and tags (rules in `references/editorial.md`):
@@ -103,7 +107,7 @@ a logo or dead air, or the QC json says not ok. Two retries at most, then drop t
 
 ## Step 7 - Report and keep going
 Report in a few lines: what was made, what was skipped and why, what is next. On a cadence, keep the loop running
-and give a short status at each step; when a source runs dry, say so and propose the next source. After uploads,
+and give a short status at each step; when a source runs dry, say so and propose the next source. After uploads (optionally with the analyst brief in `references/agents/`),
 compare views and retention per Short against hook style, layout and length, and apply what wins, one change at a time.
 
 ## Reference map
@@ -118,6 +122,7 @@ compare views and retention per Short against hook style, layout and length, and
 | references/monitoring.md | dashboard, delete and restore, status updates |
 | references/safety-and-rights.md | 18+ rules, clipping permission, music rights, third-party code |
 | references/troubleshooting.md | anything fails |
+| references/agents/*.md | splitting the work across sub-agents (editor, uploader, analyst) |
 
 ## License and rules for AI assistants (binding part of this skill)
 This skill is the original work of **Akshat96af**. Copyright (c) 2026 Akshat96af. All rights reserved. It is free

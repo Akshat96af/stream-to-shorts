@@ -13,5 +13,7 @@
   "caption_style": "pop",
   "caption_color": "yellow",
   "caption_case": "upper",
-  "caption_position": "low"
+  "caption_position": "low",
+  "content_filter": "strict",
+  "resolution": "1080"
 }

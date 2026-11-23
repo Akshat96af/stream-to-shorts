@@ -17,7 +17,10 @@ import music
 
 from common import WORK as ROOT, CFG, MUSIC_DIR, SFX_DIR
 FINAL, SFX, RENDER = ROOT / "final", SFX_DIR, ROOT / "render"
-W, H, LEN, FPS = 1080, 1920, int(CFG["clip_seconds"]), int(CFG.get("fps", 60))  # 1080x1920 @ 60 fps (the sources are 60 fps; 30 fps looked choppy/soft)
+# output size from the user's choice: 1080 (1080x1920), 1440 (1440x2560) or 2160 (4K, 2160x3840); 60 or 30 fps.
+# Higher only helps when the SOURCE is at least that sharp; it costs render time on slower PCs.
+W = {"1080": 1080, "1440": 1440, "2160": 2160, "4k": 2160}.get(str(CFG.get("resolution", "1080")).lower(), 1080)
+H, LEN, FPS = W * 16 // 9, int(CFG["clip_seconds"]), int(CFG.get("fps", 60))
 K = W / 720                          # pixel scale for effect sizes
 VOICE_UP, MUSIC_BELOW = 3, 14        # stream audio +3 dB; phonk sits 14 LU under it, then ducks further
 ADULT = ("strip club", "stripper", "strippers", "strip", "lap dance", "naked", "nude", "nudity", "topless", "porn",
@@ -331,7 +334,7 @@ def _render(clip, a):
     whoosh, hit, riser, pop, shutter = (pick_sfx(c) for c in ("whoosh", "hit", "riser", "pop", "shutter"))
     words = get_words(clip, a.model)
     flags = adult_flags(" ".join(w["w"] for w in words))
-    if flags and not getattr(a, "allow_adult", False):  # 18+ screen on the transcript; the editor checks frames too
+    if flags and not getattr(a, "allow_adult", False) and CFG.get("content_filter", "strict") != "off":  # 18+ screen on the transcript; the editor checks frames too
         (RENDER / "skips").mkdir(parents=True, exist_ok=True)
         (RENDER / "skips" / f"{clip.stem}.skip").write_text("18+ words: " + ", ".join(flags))
         print(f"  SKIPPED (18+ words: {', '.join(flags)})", flush=True)
@@ -371,7 +374,7 @@ def _render(clip, a):
                 f"[b]scale={int(W * 1.07)}:-2:flags=lanczos,crop={W}:ih[fg];[bg][fg]overlay=(W-w)/2:(H-h)/2-40[b0]")
     elif a.layout == "facecam":  # streamer cam on top, gameplay (center crop) below: shows reactions
         cx, cy, cw, ch = (float(v) for v in getattr(a, "cam", "0,0.42,0.205,0.235").split(","))
-        cam_h = 520
+        cam_h = round(H * 520 / 1920 / 2) * 2  # webcam strip = 27 % of the height at any resolution
         base = (f"[0:v]trim=start={pad}:duration={LEN},setpts=PTS-STARTPTS,fps={fps},split[c][g];"
                 f"[c]crop=iw*{cw}:ih*{ch}:iw*{cx}:ih*{cy},scale={W}:{cam_h}:force_original_aspect_ratio=increase:flags=lanczos,"
                 f"crop={W}:{cam_h}[cam];[g]scale=-2:{H - cam_h}:flags=lanczos,crop={W}:{H - cam_h}[game];"

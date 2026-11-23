@@ -19,13 +19,15 @@ folder and the settings to `sts.config.json`, then confirm them in one or two li
 | Source: live channel, finished stream or video link, local file | Step 2 path (live / vod.py / cut.py) | ask, never guess |
 | Which streamers, games or videos | `--name`, credits, clip_rules.json | ask |
 | Kinds of moments wanted: funny, rage, clutch, fails, story, reactions, scenery | what you keep in Step 3 | big reactions + funny |
-| Anything to avoid (topics, words, people, spoilers) | Step 3 filter | 18+ always avoided |
+| Anything to avoid (topics, words, people, spoilers) | Step 3 filter | spoilers avoided |
+| Content filter: strict / standard / off | `content_filter` (safety-and-rights.md) | strict |
 | Do they have permission to clip these creators | safety-and-rights.md | ask when unclear |
 
 ## 3. Look and quality
 | Question | Config key / flag | Options | Default |
 |---|---|---|---|
 | Quality vs speed | `quality` | high (slower, sharper) / balanced / fast (drafts) | balanced |
+| Output size | `resolution` | 1080 / 1440 / 2160 (4K): match the source and the PC | 1080 |
 | Frame rate | `fps` | 60 (smooth) / 30 (smaller, faster) | 60 |
 | Length | `clip_seconds` | 20-60 s; longer only for a story with a payoff | 45 |
 | Layout | `--layout` | facecam (webcam on top) / blur (full width) / crop (centre) | facecam if a webcam is visible |

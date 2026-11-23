@@ -1,0 +1,9 @@
+# stream-to-shorts by Akshat96af
+name: Feature request
+description: Suggest an idea for stream-to-shorts
+labels: [enhancement]
+body:
+  - type: textarea
+    id: idea
+    attributes: {label: Your idea, description: "What should the skill do, and for which kind of creator?"}
+    validations: {required: true}

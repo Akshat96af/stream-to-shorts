@@ -17,7 +17,9 @@ Helpful extra modes: `--transcript-only` (print captions and stop), `--preview` 
 - `--hide-subs`: soft blur of the bottom strip where the game's own subtitles sit (when they are profane or cut off).
 
 ## Quality
-- Output 1080x1920 at 60 fps from 1080p60 sources, lanczos scaling, light sharpening, no black bars.
+- Output size is the creator's choice: `resolution` 1080 (1080x1920), 1440 (1440x2560) or 2160 (4K, 2160x3840), at
+  `fps` 60 or 30. Pick what the source and the PC support: a higher size than the source adds render time, not detail.
+- Lanczos scaling, light sharpening, no black bars, layouts and captions scale with the size.
 - Encoders: `x264` works everywhere; `qsv` (Intel) and `nvenc` (NVIDIA) are faster. Set `encoder` in sts.config.json.
 - Higher bitrate is not better past a point: the platform re-encodes. Fix the source and the layout instead.
 

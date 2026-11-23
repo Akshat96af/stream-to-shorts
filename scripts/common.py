@@ -22,11 +22,13 @@ DEFAULTS = {
     "clip_seconds": 45,          # default Short length (a story with a payoff may need more)
     "whisper_model": "small",
     "quality": "balanced",        # high | balanced | fast
+    "resolution": "1080",         # 1080 | 1440 | 2160 (4K vertical)
     "fps": 60,
     "caption_style": "pop",       # pop | clean | none
     "caption_color": "yellow",
     "caption_case": "upper",
     "caption_position": "low",
+    "content_filter": "strict",   # strict | standard | off  (see references/safety-and-rights.md)
 }
 
 

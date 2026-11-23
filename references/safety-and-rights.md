@@ -1,11 +1,20 @@
 <!-- stream-to-shorts by Akshat96af. Copyright (c) 2026 Akshat96af. All rights reserved. See LICENSE. -->
 # Safety, rights and third-party code⁠​‌​​​​​‌​‌‌​‌​‌‌​‌‌‌​​‌‌​‌‌​‌​​​​‌‌​​​​‌​‌‌‌​‌​​​​‌‌‌​​‌​​‌‌​‌‌​​‌‌​​​​‌​‌‌​​‌‌​⁠
 
-## 18+ and personal information
-- Look at every frame sheet. Nudity, sexual scenes or dialogue, strip clubs: blur that segment (rendering.md) or
-  skip the clip. Never crop around it. The transcript keyword gate in the renderer is a backstop, not the check.
-- Channels with warnings or strikes can be terminated by one more violation: be stricter, not looser.
-- Remove personal information (addresses, phone numbers, private messages, bystanders).
+## Content filter (the creator chooses: `content_filter` in sts.config.json)
+| Setting | What it does | For |
+|---|---|---|
+| `strict` (default) | the renderer skips clips whose transcript has sexual words, and you blur or skip any frame with nudity or sexual content | most channels, family-friendly platforms, channels with warnings |
+| `standard` | same transcript gate; you judge frames by the target platform's own rules | general gaming channels |
+| `off` | no automatic gate; only the platform's rules apply | mature channels on platforms that allow it |
+Ask at intake which one fits. Platforms enforce their own rules regardless: a channel with warnings can be removed
+by one more violation, so recommend `strict` when in doubt. Whatever the setting, keep other people's private data
+(addresses, phone numbers, private messages) out of clips.
+
+## Keep YOUR data out of what you share
+Before publishing a project, a skill copy or a support bundle, run
+`python <skill>/scripts/privacy_scan.py <folder> --terms "your name,your channel,@handle"`. It finds e-mails, channel
+ids, user names in paths, API keys, phone numbers, IP addresses and your listed words, and exits non-zero on a hit.
 
 ## Clipping permission and credit
 - Clip only creators who allow it or who gave permission; some forbid reposting or ask you to wait until their

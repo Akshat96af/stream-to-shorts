@@ -8,7 +8,7 @@
 **Turn any livestream, VOD or long video into finished, upload-ready Shorts with one sentence to your AI agent.**
 
 <a href="#-quick-start"><img alt="Quick start" src="https://img.shields.io/badge/quick%20start-2%20minutes-ffd23f?style=for-the-badge&labelColor=111"/></a>
-<img alt="Output" src="https://img.shields.io/badge/output-1080x1920%20%C2%B7%2060fps-ff5d8f?style=for-the-badge&labelColor=111"/>
+<img alt="Output" src="https://img.shields.io/badge/output-1080p%20to%204K%20%C2%B7%2060fps-ff5d8f?style=for-the-badge&labelColor=111"/>
 <img alt="Runs locally" src="https://img.shields.io/badge/runs-100%25%20local-3ddc84?style=for-the-badge&labelColor=111"/>
 <img alt="Agent skill" src="https://img.shields.io/badge/AI%20agent-skill-7c5cff?style=for-the-badge&labelColor=111"/>
 <img alt="License" src="https://img.shields.io/badge/license-free%20use%20%C2%B7%20no%20resale-5aa9ff?style=for-the-badge&labelColor=111"/>
@@ -42,6 +42,23 @@
 </tr>
 </table>
 
+## 📖 What is stream-to-shorts?
+
+**stream-to-shorts** is an AI agent skill for **automatic video clipping**: it turns Twitch, YouTube and Kick
+livestreams, stream VODs, podcasts and long gameplay videos into **viral YouTube Shorts, TikToks and Instagram Reels**.
+Your agent (Claude Code, Claude Desktop or any agent that loads skills) asks what you want, finds the highlights,
+adds **auto captions**, a hook and music, checks quality, and hands you upload-ready vertical videos with SEO titles
+and hashtags. Free, local and private: an open alternative to paid clipping tools.
+
+**Built for**: clip channels · streamers and their editors · gaming channels · podcast clippers · agencies running many channels.
+
+<details><summary><b>Contents</b></summary>
+
+- [How it works](#-how-it-works) · [Features](#-features) · [Layouts](#-layouts) · [Quick start](#-quick-start)
+- [Use it on the web](#-use-it-on-the-web-no-install) · [Make it yours](#%EF%B8%8F-make-it-yours) · [What's inside](#-whats-inside)
+- [Why it's different](#-why-its-different) · [FAQ](#-faq) · [License](#-license)
+</details>
+
 ## ⚡ How it works
 
 <p align="center"><img src="assets/pipeline.svg" alt="Source, find, check, render, deliver" width="100%"/></p>
@@ -51,7 +68,7 @@
 | 1 | **Asks first** | Learns your channel, platform, the clips you want, caption style, quality and pace, or picks them up from the chat. No guessing. |
 | 2 | **Finds the moments** | Ranks the moments viewers actually rewatched (most-replayed graph), chat explosions, and real voice + face reactions. |
 | 3 | **Checks like an editor** | Looks at the frames and reads the transcript: premise, payoff, a real reaction, nothing unsafe, nothing repeated. |
-| 4 | **Renders the Short** | 1080x1920 at 60 fps with hook, captions, layout, music, SFX and effects, then runs QC. |
+| 4 | **Renders the Short** | At the size your PC and source allow (1080p, 1440p or 4K, 30 or 60 fps) with hook, captions, layout, music, SFX and effects, then runs QC. |
 | 5 | **Delivers** | Hands you the Shorts plus SEO titles, descriptions and hashtags, or uploads them for you if you opt in. |
 
 ## ✨ Features
@@ -158,6 +175,8 @@ Everything is set once and remembered in `sts.config.json` and your profile:
 | `caption_color` | yellow · green · cyan · red · orange · white | yellow |
 | `caption_case` / `caption_position` | upper · normal / low · middle | upper / low |
 | `quality` | `high` · `balanced` · `fast` | `balanced` |
+| `resolution` | `1080` · `1440` · `2160` (4K vertical) | `1080` |
+| `resolution` | `1080` · `1440` · `2160` (4K vertical) | `1080` |
 | `fps` / `clip_seconds` | 60 · 30 / 20-60 | 60 / 45 |
 | `encoder` | `x264` · `qsv` (Intel) · `nvenc` (NVIDIA) | `x264` |
 | `music_dir` / `sfx_dir` | your own licensed audio | `music` / `sfx` |
@@ -172,14 +191,27 @@ stream-to-shorts/
 ├── scripts/              moment finders, renderer, QC, dashboard, optional uploader
 ├── assets/               artwork and the bring-your-own-audio guide
 ├── stream-to-shorts-web.zip   the no-install edition for chat apps
+├── CHANGELOG.md · SECURITY.md   release notes and security policy
 └── config.example.json   your settings template
 ```
+
+## 🏆 Why it's different
+
+| | Typical auto-clipper | **stream-to-shorts** |
+|---|---|---|
+| Finds moments by | loudness only | what viewers **rewatched**, chat explosions, real face + voice reactions |
+| Hook | none or generic | written per clip from what is **seen and said**, on frame 1 |
+| Judgment | none | 34 lessons from a real clipping channel: no lyrics as quotes, no repeats, no cutscene filler |
+| Quality | fixed | 1080p to **4K**, 30/60 fps, QC + frame sheet on every Short |
+| Privacy | cloud upload | **100 % local**, nothing leaves your PC |
+| Learns | no | tracks views and retention, changes one thing at a time |
 
 ## ❓ FAQ
 
 <details><summary><b>Does it need a GPU or a paid API?</b></summary>
 
-No. It runs on a normal PC with free tools. An Intel or NVIDIA encoder makes rendering faster, but x264 works everywhere.
+No. It runs on a normal PC with free tools and scales with your hardware: 1080p on a laptop, 1440p or full 4K on a
+stronger machine. An Intel or NVIDIA encoder makes rendering faster; x264 works everywhere.
 </details>
 
 <details><summary><b>Does it upload by itself?</b></summary>

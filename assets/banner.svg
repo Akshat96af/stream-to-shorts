@@ -1,68 +1,323 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="420" viewBox="0 0 1280 420" role="img" aria-label="stream-to-shorts by Akshat96af">
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="460" viewBox="0 0 1280 460" role="img" aria-label="stream-to-shorts by Akshat96af">
 <!-- stream-to-shorts by Akshat96af. Copyright (c) 2026 Akshat96af. All rights reserved. -->
 <title>stream-to-shorts by Akshat96af</title>
 <defs>
-  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#0b0d14"/><stop offset="0.55" stop-color="#151a2e"/><stop offset="1" stop-color="#2a1030"/>
-  </linearGradient>
-  <linearGradient id="hot" x1="0" y1="0" x2="1" y2="0">
-    <stop offset="0" stop-color="#ffd23f"/><stop offset="0.5" stop-color="#ff5d8f"/><stop offset="1" stop-color="#7c5cff"/>
-  </linearGradient>
-  <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#ff5d8f" stop-opacity=".55"/><stop offset="1" stop-color="#ff5d8f" stop-opacity="0"/></radialGradient>
-  <clipPath id="ph"><rect x="0" y="0" width="150" height="266" rx="18"/></clipPath>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#07080d"/><stop offset=".55" stop-color="#11142a"/><stop offset="1" stop-color="#240b2e"/></linearGradient>
+  <linearGradient id="hot" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffd23f"/><stop offset=".5" stop-color="#ff5d8f"/><stop offset="1" stop-color="#7c5cff"/></linearGradient>
+  <linearGradient id="ttl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff"/><stop offset=".7" stop-color="#ffe7f0"/><stop offset="1" stop-color="#d9ccff"/></linearGradient>
+  <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+  <radialGradient id="g1" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#ff5d8f" stop-opacity=".5"/><stop offset="1" stop-color="#ff5d8f" stop-opacity="0"/></radialGradient>
+  <radialGradient id="g2" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#7c5cff" stop-opacity=".55"/><stop offset="1" stop-color="#7c5cff" stop-opacity="0"/></radialGradient>
+  <clipPath id="tclip"><text x="64" y="176" style="font-family:'Segoe UI','SF Pro Display',Inter,Roboto,Helvetica,Arial,sans-serif;font-weight:900;font-size:80px;letter-spacing:-2px">stream-to-shorts</text></clipPath>
 </defs>
 <style>
-  .t{font-family:'Segoe UI',Inter,Roboto,Helvetica,Arial,sans-serif;font-weight:900;font-size:76px;fill:#fff;letter-spacing:-1px}
-  .s{font-family:'Segoe UI',Inter,Roboto,Helvetica,Arial,sans-serif;font-weight:600;font-size:26px;fill:#c9d1e6}
-  .b{font-family:'Segoe UI',Inter,Roboto,Helvetica,Arial,sans-serif;font-weight:700;font-size:16px;fill:#8b95a8;letter-spacing:3px}
-  .pill{font-family:'Segoe UI',Inter,Roboto,Helvetica,Arial,sans-serif;font-weight:800;font-size:15px;fill:#111}
-  .orb{animation:float 7s ease-in-out infinite} .orb2{animation:float 9s ease-in-out infinite reverse}
-  .bar{animation:grow 3.2s ease-in-out infinite}
-  .ph1{animation:bob 4s ease-in-out infinite} .ph2{animation:bob 4s ease-in-out infinite .6s} .ph3{animation:bob 4s ease-in-out infinite 1.2s}
-  .w1{animation:hl 2.4s steps(1) infinite} .w2{animation:hl 2.4s steps(1) infinite .8s} .w3{animation:hl 2.4s steps(1) infinite 1.6s}
-  .rec{animation:blink 1.2s steps(2) infinite}
-  @keyframes float{0%,100%{transform:translate(0,0)}50%{transform:translate(30px,-18px)}}
-  @keyframes grow{0%{transform:scaleX(.15)}55%{transform:scaleX(1)}100%{transform:scaleX(.15)}}
-  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-  @keyframes hl{0%{fill:#ffd23f}33%{fill:#ffffff}}
-  @keyframes blink{50%{opacity:0}}
+  .ui{font-family:'Segoe UI','SF Pro Display',Inter,Roboto,Helvetica,Arial,sans-serif}
+  .fb{transform-box:fill-box;transform-origin:center}
+  .punch{animation:punch 3.6s cubic-bezier(.2,.8,.2,1) infinite;transform-box:fill-box;transform-origin:50% 45%}
+  .flash{animation:flash 3.6s linear infinite}
+  .car{animation:drive 3.6s linear infinite}
+  .lane{animation:lane .6s linear infinite}
+  .mouth{animation:mouth 3.6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+  .brow{animation:brow 3.6s ease-in-out infinite}
+  .w1{animation:pop 3.6s infinite} .w2{animation:pop 3.6s infinite .45s} .w3{animation:pop 3.6s infinite .9s}
+  .heart{animation:beat 1.8s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+  .prog{animation:prog 3.6s linear infinite}
+  .live{animation:blink 1.4s steps(2) infinite}
+  .glint{animation:glint 5s ease-in-out infinite}
+  @keyframes punch{0%,46%,100%{transform:scale(1)}52%{transform:scale(1.13)}66%{transform:scale(1.03)}}
+  @keyframes flash{0%,49%,57%,100%{opacity:0}51%{opacity:.6}}
+  @keyframes drive{0%{transform:translateX(-140px)}100%{transform:translateX(420px)}}
+  @keyframes lane{to{stroke-dashoffset:-36}}
+  @keyframes mouth{0%,44%,100%{transform:scaleY(.35)}52%,70%{transform:scaleY(1.25)}}
+  @keyframes brow{0%,44%,100%{transform:translateY(0)}52%,70%{transform:translateY(-5px)}}
+  @keyframes pop{0%,9%{fill:#ffd23f;transform:scale(1.18)}16%,100%{fill:#ffffff;transform:scale(1)}}
+  @keyframes beat{0%,100%{transform:scale(1)}12%{transform:scale(1.25)}24%{transform:scale(1)}}
+  @keyframes prog{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+  @keyframes blink{50%{opacity:.25}}
+  @keyframes glint{0%,60%{transform:translateX(-400px)}100%{transform:translateX(900px)}}
+
+  .t{font-family:'Segoe UI','SF Pro Display',Inter,Roboto,Helvetica,Arial,sans-serif;font-weight:900;font-size:80px;letter-spacing:-2px}
+  .s{font-family:'Segoe UI','SF Pro Display',Inter,Roboto,Helvetica,Arial,sans-serif;font-weight:600;font-size:27px;fill:#d6dcef}
+  .b{font-family:'Segoe UI','SF Pro Display',Inter,Roboto,Helvetica,Arial,sans-serif;font-weight:800;font-size:14px;fill:#9aa3ba;letter-spacing:4px}
+  .pill{font-family:'Segoe UI','SF Pro Display',Inter,Roboto,Helvetica,Arial,sans-serif;font-weight:800;font-size:14px}
+  .o1{animation:float 8s ease-in-out infinite} .o2{animation:float 10s ease-in-out infinite reverse}
+  .bar{animation:grow 3.6s ease-in-out infinite;transform-box:fill-box;transform-origin:left center}
+  .ph1{animation:bob 5s ease-in-out infinite} .ph2{animation:bob 5s ease-in-out infinite .7s} .ph3{animation:bob 5s ease-in-out infinite 1.4s}
+  .spark{animation:spark 3s ease-in-out infinite}
+  @keyframes float{0%,100%{transform:translate(0,0)}50%{transform:translate(36px,-22px)}}
+  @keyframes grow{0%{transform:scaleX(.12)}55%{transform:scaleX(1)}100%{transform:scaleX(.12)}}
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+  @keyframes spark{0%,100%{opacity:.2}50%{opacity:1}}
 </style>
-<rect width="1280" height="420" fill="url(#bg)"/>
-<circle class="orb" cx="1000" cy="80" r="220" fill="url(#glow)"/>
-<circle class="orb2" cx="200" cy="420" r="200" fill="url(#glow)" opacity=".6"/>
-<text x="70" y="70" class="b">AI SKILL  ·  STREAM CLIPPING  ·  1080x1920 60FPS</text>
-<text x="66" y="165" class="t">stream-to-shorts</text>
-<rect class="bar" x="70" y="186" width="520" height="8" rx="4" fill="url(#hot)" style="transform-origin:70px 190px"/>
-<text x="70" y="240" class="s">Long streams in. Scroll-stopping Shorts out.</text>
-<text x="70" y="276" class="s" style="font-size:20px;fill:#8b95a8">Finds the moments viewers rewatch. Edits them like a pro.</text>
-<g transform="translate(70,316)">
-  <rect width="150" height="38" rx="19" fill="#ffd23f"/><text x="75" y="25" text-anchor="middle" class="pill">Hook on frame 1</text>
-  <rect x="164" width="170" height="38" rx="19" fill="#ff5d8f"/><text x="249" y="25" text-anchor="middle" class="pill">Word-pop captions</text>
-  <rect x="348" width="150" height="38" rx="19" fill="#7c5cff"/><text x="423" y="25" text-anchor="middle" class="pill" style="fill:#fff">Facecam layout</text>
-  <rect x="512" width="130" height="38" rx="19" fill="#3ddc84"/><text x="577" y="25" text-anchor="middle" class="pill">Auto QC</text>
+<rect width="1280" height="460" fill="url(#bg)"/>
+<line x1="0" y1="300" x2="-1280" y2="460" stroke="#7c5cff" stroke-opacity=".18"/><line x1="80" y1="300" x2="-1040" y2="460" stroke="#7c5cff" stroke-opacity=".18"/><line x1="160" y1="300" x2="-800" y2="460" stroke="#7c5cff" stroke-opacity=".18"/><line x1="240" y1="300" x2="-560" y2="460" stroke="#7c5cff" stroke-opacity=".18"/><line x1="320" y1="300" x2="-320" y2="460" stroke="#7c5cff" stroke-opacity=".18"/><line x1="400" y1="300" x2="-80" y2="460" stroke="#7c5cff" stroke-opacity=".18"/><line x1="480" y1="300" x2="160" y2="460" stroke="#7c5cff" stroke-opacity=".18"/><line x1="560" y1="300" x2="400" y2="460" stroke="#7c5cff" stroke-opacity=".18"/><line x1="640" y1="300" x2="640" y2="460" stroke="#7c5cff" stroke-opacity=".18"/><line x1="720" y1="300" x2="880" y2="460" stroke="#7c5cff" stroke-opacity=".18"/><line x1="800" y1="300" x2="1120" y2="460" stroke="#7c5cff" stroke-opacity=".18"/><line x1="880" y1="300" x2="1360" y2="460" stroke="#7c5cff" stroke-opacity=".18"/><line x1="960" y1="300" x2="1600" y2="460" stroke="#7c5cff" stroke-opacity=".18"/><line x1="1040" y1="300" x2="1840" y2="460" stroke="#7c5cff" stroke-opacity=".18"/><line x1="1120" y1="300" x2="2080" y2="460" stroke="#7c5cff" stroke-opacity=".18"/><line x1="1200" y1="300" x2="2320" y2="460" stroke="#7c5cff" stroke-opacity=".18"/><line x1="1280" y1="300" x2="2560" y2="460" stroke="#7c5cff" stroke-opacity=".18"/><line x1="0" y1="316" x2="1280" y2="316" stroke="#7c5cff" stroke-opacity="0.08"/><line x1="0" y1="338" x2="1280" y2="338" stroke="#7c5cff" stroke-opacity="0.10"/><line x1="0" y1="366" x2="1280" y2="366" stroke="#7c5cff" stroke-opacity="0.13"/><line x1="0" y1="402" x2="1280" y2="402" stroke="#7c5cff" stroke-opacity="0.17"/><line x1="0" y1="446" x2="1280" y2="446" stroke="#7c5cff" stroke-opacity="0.22"/>
+<circle class="o1" cx="1010" cy="90" r="260" fill="url(#g1)"/>
+<circle class="o2" cx="180" cy="460" r="260" fill="url(#g2)"/>
+<g fill="#fff"><circle class="spark" cx="620" cy="60" r="2"/><circle class="spark" cx="700" cy="120" r="1.5" style="animation-delay:.8s"/>
+  <circle class="spark" cx="560" cy="400" r="2" style="animation-delay:1.6s"/><circle class="spark" cx="40" cy="40" r="1.5" style="animation-delay:.4s"/></g>
+<text x="66" y="74" class="b">AI AGENT SKILL  ·  STREAM CLIPPING  ·  UP TO 4K · 60 FPS</text>
+<text x="64" y="176" class="t" fill="url(#ttl)">stream-to-shorts</text>
+<g clip-path="url(#tclip)"><g class="glint"><rect x="0" y="80" width="160" height="120" fill="url(#sheen)" transform="skewX(-20)"/></g></g>
+<rect class="bar" x="68" y="198" width="560" height="8" rx="4" fill="url(#hot)"/>
+<text x="68" y="252" class="s">Long streams in. Scroll-stopping Shorts out.</text>
+<text x="68" y="288" class="s" style="font-size:19px;fill:#8f98b0">Finds the moments viewers rewatch. Edits them like a pro.</text>
+<g transform="translate(68,322)">
+  <rect width="158" height="38" rx="19" fill="#ffd23f"/><text x="79" y="24" text-anchor="middle" class="pill" fill="#111">Hook on frame 1</text>
+  <rect x="170" width="174" height="38" rx="19" fill="#ff5d8f"/><text x="257" y="24" text-anchor="middle" class="pill" fill="#111">Word-pop captions</text>
+  <rect x="356" width="150" height="38" rx="19" fill="#7c5cff"/><text x="431" y="24" text-anchor="middle" class="pill" fill="#fff">Facecam layout</text>
+  <rect x="518" width="110" height="38" rx="19" fill="#3ddc84"/><text x="573" y="24" text-anchor="middle" class="pill" fill="#111">Auto QC</text>
 </g>
-<text x="70" y="396" class="b" style="font-size:13px;letter-spacing:2px">BY AKSHAT96AF</text>
-<g transform="translate(760,70)">
-  <g class="ph1"><g transform="rotate(-8 75 133)">
-    <rect width="150" height="266" rx="18" fill="#1b2130" stroke="#2f3954" stroke-width="3"/>
-    <g clip-path="url(#ph)"><rect width="150" height="80" fill="#3a2a55"/><circle cx="75" cy="48" r="20" fill="#ffb38a"/>
-    <rect y="80" width="150" height="186" fill="#1f6f8b"/><rect y="180" width="150" height="86" fill="#2c8a5a"/></g>
-    <rect x="18" y="14" width="114" height="18" rx="3" fill="#fff"/><rect x="26" y="20" width="98" height="6" rx="3" fill="#111"/>
-  </g></g>
-  <g transform="translate(150,-20)"><g class="ph2">
-    <rect width="150" height="266" rx="18" fill="#1b2130" stroke="#ffd23f" stroke-width="3"/>
-    <g clip-path="url(#ph)"><rect width="150" height="80" fill="#55304a"/><circle cx="75" cy="48" r="20" fill="#e0a27a"/>
-    <rect y="80" width="150" height="186" fill="#8b3a3a"/><rect y="200" width="150" height="66" fill="#3a3f8b"/></g>
-    <rect x="16" y="14" width="118" height="18" rx="3" fill="#fff"/><rect x="24" y="20" width="102" height="6" rx="3" fill="#111"/>
-    <text x="75" y="232" text-anchor="middle" style="font-family:'Segoe UI',Inter,Roboto,Helvetica,Arial,sans-serif;font-weight:900;font-size:15px">
-      <tspan class="w1" fill="#fff">NO </tspan><tspan class="w2" fill="#fff">WAY </tspan><tspan class="w3" fill="#fff">BRO</tspan></text>
-    <circle class="rec" cx="134" cy="252" r="5" fill="#ff3b5c"/>
-  </g></g>
-  <g transform="translate(305,10)"><g class="ph3"><g transform="rotate(8 75 133)">
-    <rect width="150" height="266" rx="18" fill="#1b2130" stroke="#2f3954" stroke-width="3"/>
-    <g clip-path="url(#ph)"><rect width="150" height="80" fill="#2a4055"/><circle cx="75" cy="48" r="20" fill="#c98b62"/>
-    <rect y="80" width="150" height="186" fill="#6b5a2e"/><rect y="170" width="150" height="96" fill="#2e5a6b"/></g>
-    <rect x="22" y="14" width="106" height="18" rx="3" fill="#fff"/><rect x="30" y="20" width="90" height="6" rx="3" fill="#111"/>
-  </g></g></g>
+<text x="68" y="420" class="b" style="font-size:12px;letter-spacing:3px">BY AKSHAT96AF</text>
+<g transform="translate(790,44) scale(.48)"><g class="ph1"><g transform="rotate(-9 180 370)">
+<defs>
+  <linearGradient id="b1edge" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5b6475"/><stop offset=".5" stop-color="#1a1e27"/><stop offset="1" stop-color="#454c5c"/></linearGradient>
+  <linearGradient id="b1room" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#123b4a"/><stop offset="1" stop-color="#0b1d33"/></linearGradient>
+  <linearGradient id="b1sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6ec3ff"/><stop offset=".55" stop-color="#ffb26b"/><stop offset="1" stop-color="#ff7b54"/></linearGradient>
+  <linearGradient id="b1shade" x1="0" y1="0" x2="0" y2="1"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".65"/></linearGradient>
+  <radialGradient id="b1led" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#ff5dd2" stop-opacity=".8"/><stop offset="1" stop-color="#ff5dd2" stop-opacity="0"/></radialGradient>
+  <clipPath id="b1scr"><rect x="12" y="12" width="336" height="716" rx="44"/></clipPath>
+</defs>
+<rect x="-3" y="90" width="4" height="54" rx="2" fill="#2a2f3a"/><rect x="-3" y="160" width="4" height="80" rx="2" fill="#2a2f3a"/><rect x="359" y="140" width="4" height="96" rx="2" fill="#2a2f3a"/>
+<rect x="0" y="0" width="360" height="740" rx="56" fill="url(#b1edge)"/>
+<rect x="6" y="6" width="348" height="728" rx="50" fill="#07080b"/>
+<g clip-path="url(#b1scr)">
+  <rect x="12" y="12" width="336" height="716" fill="#000"/>
+  <rect x="12" y="12" width="336" height="228" fill="url(#b1room)"/>
+  <circle cx="300" cy="70" r="90" fill="url(#b1led)"/>
+  <rect x="28" y="64" width="300" height="3" rx="1.5" fill="#ff5dd2" opacity=".75"/><rect x="28" y="168" width="110" height="5" rx="2" fill="#2b2140"/>
+  <rect x="40" y="132" width="18" height="36" rx="3" fill="#5ce1e6" opacity=".55"/><rect x="62" y="122" width="14" height="46" rx="3" fill="#ffd23f" opacity=".55"/>
+  <path d="M118 240 q62 -70 124 0z" fill="#1e1e28"/>
+  <path d="M132 240 q48 -52 96 0z" fill="#ff3b5c"/>
+  <circle cx="180" cy="132" r="40" fill="#e3a77e"/>
+  <path d="M140 124 q40 -62 80 0 q-6 -30 -40 -32 q-34 2 -40 32z" fill="#2b1d14"/>
+  <path d="M134 128 a46 46 0 0 1 92 0" fill="none" stroke="#14151c" stroke-width="9"/>
+  <rect x="124" y="122" width="16" height="34" rx="7" fill="#14151c"/><rect x="220" y="122" width="16" height="34" rx="7" fill="#14151c"/>
+  <path d="M130 150 q-22 26 6 46" fill="none" stroke="#14151c" stroke-width="4"/><circle cx="138" cy="196" r="5" fill="#14151c"/>
+  <g class="brow"><rect x="160" y="114" width="14" height="4" rx="2" fill="#2b1d14"/><rect x="186" y="114" width="14" height="4" rx="2" fill="#2b1d14"/></g>
+  <ellipse cx="167" cy="128" rx="4.5" ry="6" fill="#16110d"/><ellipse cx="193" cy="128" rx="4.5" ry="6" fill="#16110d"/>
+  <g class="mouth"><ellipse cx="180" cy="152" rx="11" ry="9" fill="#5a1717"/></g>
+  <rect x="24" y="214" width="44" height="16" rx="4" fill="#ff1f45"/><text x="46" y="226" text-anchor="middle" class="ui live" style="font-size:10px;font-weight:900;fill:#fff">LIVE</text>
+  
+  <rect x="12" y="238" width="336" height="3" fill="#ffd23f" opacity=".85"/>
+  <g class="punch">
+    <rect x="12" y="241" width="336" height="487" fill="url(#b1sky)"/>
+    <circle cx="250" cy="420" r="46" fill="#fff3c4" opacity=".9"/>
+    <g fill="#2b2d52"><rect x="20" y="360" width="42" height="150"/><rect x="66" y="330" width="34" height="180"/><rect x="104" y="390" width="50" height="120"/>
+      <rect x="236" y="350" width="38" height="160"/><rect x="278" y="380" width="62" height="130"/></g>
+    <g fill="#ffd98a" opacity=".85"><rect x="28" y="372" width="6" height="8"/><rect x="44" y="392" width="6" height="8"/><rect x="74" y="344" width="6" height="8"/>
+      <rect x="86" y="370" width="6" height="8"/><rect x="246" y="368" width="6" height="8"/><rect x="290" y="398" width="6" height="8"/><rect x="314" y="420" width="6" height="8"/></g>
+    <g stroke="#173b2a" stroke-width="5" fill="none"><path d="M178 520 q4 -60 -6 -92"/><path d="M322 520 q-2 -52 6 -84"/></g>
+    <g fill="#1f6b46"><path d="M172 430 q-30 -6 -44 14 q26 -8 44 -8z"/><path d="M172 430 q30 -8 44 12 q-26 -6 -44 -6z"/><path d="M172 430 q-8 -26 -32 -30 q20 12 26 30z"/>
+      <path d="M328 438 q-28 -6 -40 12 q24 -8 40 -8z"/><path d="M328 438 q28 -8 40 10 q-24 -6 -40 -6z"/></g>
+    <rect x="12" y="510" width="336" height="218" fill="#2d3238"/>
+    <rect x="12" y="510" width="336" height="10" fill="#3d434b"/>
+    <line class="lane" x1="12" y1="600" x2="348" y2="600" stroke="#ffd23f" stroke-width="6" stroke-dasharray="20 16"/>
+    <g class="car">
+      <path d="M40 586 q8 -30 40 -32 l58 0 q24 2 36 30 l14 4 q6 2 6 10 l0 14 l-164 0 l0 -16 q0 -8 10 -10z" fill="#3ddc84"/>
+      <path d="M86 560 l44 0 q16 2 24 22 l-82 0z" fill="#bfe6ff" opacity=".9"/>
+      <circle cx="74" cy="614" r="15" fill="#111"/><circle cx="74" cy="614" r="6" fill="#9aa0a6"/>
+      <circle cx="160" cy="614" r="15" fill="#111"/><circle cx="160" cy="614" r="6" fill="#9aa0a6"/>
+      <rect x="182" y="590" width="10" height="6" rx="2" fill="#fff6b0"/>
+    </g>
+    <circle cx="62" cy="676" r="34" fill="#11151c" stroke="#fff" stroke-opacity=".7" stroke-width="2"/>
+    <path d="M44 690 l12 -24 l14 10 l12 -20" fill="none" stroke="#5aa9ff" stroke-width="3"/><circle cx="62" cy="676" r="4" fill="#ff3b5c"/>
+    <g fill="#fff" opacity=".9"><path d="M262 266 l4 9 l10 1 l-7 7 l2 10 l-9 -5 l-9 5 l2 -10 l-7 -7 l10 -1z"/><path d="M290 266 l4 9 l10 1 l-7 7 l2 10 l-9 -5 l-9 5 l2 -10 l-7 -7 l10 -1z"/></g>
+  </g>
+  <rect x="12" y="241" width="336" height="487" fill="url(#b1shade)"/>
+  <rect class="flash" x="12" y="241" width="336" height="487" fill="#fff"/>
+  <rect x="44" y="34" width="272" height="66" rx="10" fill="#fff"/>
+  <text x="180" y="62" text-anchor="middle" class="ui" style="font-size:20px;font-weight:900;fill:#0b0d12">THIS NPC HAD</text>
+  <text x="180" y="88" text-anchor="middle" class="ui" style="font-size:20px;font-weight:900;fill:#0b0d12">NO CHILL</text>
+  <text x="180" y="472" text-anchor="middle" class="ui" style="font-size:34px;font-weight:900;paint-order:stroke;stroke:#0b0d12;stroke-width:8px;stroke-linejoin:round">
+    <tspan class="w1 fb" fill="#fff">BRO </tspan><tspan class="w2 fb" fill="#fff">WHAT </tspan><tspan class="w3 fb" fill="#fff">?!</tspan></text>
+  <g class="ui" style="fill:#fff;font-size:11px;font-weight:700" text-anchor="middle">
+    <g transform="translate(316,470)"><g class="heart"><path d="M0 8 C-14 -6 -6 -18 0 -9 C6 -18 14 -6 0 8z" fill="#ff3b5c"/></g></g>
+    <text x="316" y="494">842K</text>
+    <path d="M304 518 h24 a4 4 0 0 1 4 4 v14 a4 4 0 0 1 -4 4 h-14 l-8 7 v-7 h-2 a4 4 0 0 1 -4 -4 v-14 a4 4 0 0 1 4 -4z" fill="#fff" opacity=".95"/>
+    <text x="316" y="560">8.4K</text>
+    <path d="M306 584 l20 -9 l0 6 q-14 2 -18 14 q6 -8 18 -7 l0 6z" fill="#fff"/>
+    <text x="316" y="612">Share</text>
+    <rect x="303" y="628" width="26" height="26" rx="7" fill="none" stroke="#fff" stroke-width="3"/><circle cx="316" cy="641" r="5" fill="#fff"/>
+  </g>
+  <circle cx="34" cy="664" r="13" fill="#7c5cff"/><text x="34" y="669" text-anchor="middle" class="ui" style="font-size:12px;font-weight:900;fill:#fff">Y</text>
+  <text x="54" y="669" class="ui" style="font-size:13px;font-weight:800;fill:#fff">@yourchannel</text>
+  <rect x="158" y="653" width="78" height="24" rx="12" fill="#fff"/><text x="197" y="669" text-anchor="middle" class="ui" style="font-size:12px;font-weight:800;fill:#0b0d12">Subscribe</text>
+  <text x="24" y="700" class="ui" style="font-size:12.5px;font-weight:600;fill:#e9edf5">He did not expect that ending #gaming #shorts</text>
+  <rect x="12" y="718" width="336" height="4" fill="#ffffff" opacity=".25"/>
+  <rect class="prog" x="12" y="718" width="336" height="4" fill="#ff1f45" style="transform-origin:12px 720px"/>
+  <text x="40" y="34" class="ui" style="font-size:13px;font-weight:800;fill:#fff">9:41</text>
+  <rect x="300" y="24" width="24" height="11" rx="3" fill="none" stroke="#fff" stroke-width="1.6"/><rect x="302" y="26" width="17" height="7" rx="1.5" fill="#fff"/>
+  <g fill="#fff"><rect x="276" y="30" width="3" height="5"/><rect x="281" y="27" width="3" height="8"/><rect x="286" y="24" width="3" height="11"/></g>
+  <rect x="134" y="20" width="92" height="26" rx="13" fill="#000"/>
 </g>
+<rect x="6" y="6" width="348" height="728" rx="50" fill="none" stroke="#ffffff" stroke-opacity=".08" stroke-width="2"/>
+</g></g></g>
+<g transform="translate(935,12) scale(.54)"><g class="ph2">
+<defs>
+  <linearGradient id="b2edge" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5b6475"/><stop offset=".5" stop-color="#1a1e27"/><stop offset="1" stop-color="#454c5c"/></linearGradient>
+  <linearGradient id="b2room" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b1f6b"/><stop offset="1" stop-color="#0f2a4d"/></linearGradient>
+  <linearGradient id="b2sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7cc7ff"/><stop offset=".55" stop-color="#ffcf7a"/><stop offset="1" stop-color="#ff9a5a"/></linearGradient>
+  <linearGradient id="b2shade" x1="0" y1="0" x2="0" y2="1"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".65"/></linearGradient>
+  <radialGradient id="b2led" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#ff5dd2" stop-opacity=".8"/><stop offset="1" stop-color="#ff5dd2" stop-opacity="0"/></radialGradient>
+  <clipPath id="b2scr"><rect x="12" y="12" width="336" height="716" rx="44"/></clipPath>
+</defs>
+<rect x="-3" y="90" width="4" height="54" rx="2" fill="#2a2f3a"/><rect x="-3" y="160" width="4" height="80" rx="2" fill="#2a2f3a"/><rect x="359" y="140" width="4" height="96" rx="2" fill="#2a2f3a"/>
+<rect x="0" y="0" width="360" height="740" rx="56" fill="url(#b2edge)"/>
+<rect x="6" y="6" width="348" height="728" rx="50" fill="#07080b"/>
+<g clip-path="url(#b2scr)">
+  <rect x="12" y="12" width="336" height="716" fill="#000"/>
+  <rect x="12" y="12" width="336" height="228" fill="url(#b2room)"/>
+  <circle cx="300" cy="70" r="90" fill="url(#b2led)"/>
+  <rect x="28" y="64" width="300" height="3" rx="1.5" fill="#ff5dd2" opacity=".75"/><rect x="28" y="168" width="110" height="5" rx="2" fill="#2b2140"/>
+  <rect x="40" y="132" width="18" height="36" rx="3" fill="#5ce1e6" opacity=".55"/><rect x="62" y="122" width="14" height="46" rx="3" fill="#ffd23f" opacity=".55"/>
+  <path d="M118 240 q62 -70 124 0z" fill="#1e1e28"/>
+  <path d="M132 240 q48 -52 96 0z" fill="#ff3b5c"/>
+  <circle cx="180" cy="132" r="40" fill="#e3a77e"/>
+  <path d="M140 124 q40 -62 80 0 q-6 -30 -40 -32 q-34 2 -40 32z" fill="#2b1d14"/>
+  <path d="M134 128 a46 46 0 0 1 92 0" fill="none" stroke="#14151c" stroke-width="9"/>
+  <rect x="124" y="122" width="16" height="34" rx="7" fill="#14151c"/><rect x="220" y="122" width="16" height="34" rx="7" fill="#14151c"/>
+  <path d="M130 150 q-22 26 6 46" fill="none" stroke="#14151c" stroke-width="4"/><circle cx="138" cy="196" r="5" fill="#14151c"/>
+  <g class="brow"><rect x="160" y="114" width="14" height="4" rx="2" fill="#2b1d14"/><rect x="186" y="114" width="14" height="4" rx="2" fill="#2b1d14"/></g>
+  <ellipse cx="167" cy="128" rx="4.5" ry="6" fill="#16110d"/><ellipse cx="193" cy="128" rx="4.5" ry="6" fill="#16110d"/>
+  <g class="mouth"><ellipse cx="180" cy="152" rx="11" ry="9" fill="#5a1717"/></g>
+  <rect x="24" y="214" width="44" height="16" rx="4" fill="#ff1f45"/><text x="46" y="226" text-anchor="middle" class="ui live" style="font-size:10px;font-weight:900;fill:#fff">LIVE</text>
+  
+  <rect x="12" y="238" width="336" height="3" fill="#ffd23f" opacity=".85"/>
+  <g class="punch">
+    <rect x="12" y="241" width="336" height="487" fill="url(#b2sky)"/>
+    <circle cx="250" cy="420" r="46" fill="#fff3c4" opacity=".9"/>
+    <g fill="#2b2d52"><rect x="20" y="360" width="42" height="150"/><rect x="66" y="330" width="34" height="180"/><rect x="104" y="390" width="50" height="120"/>
+      <rect x="236" y="350" width="38" height="160"/><rect x="278" y="380" width="62" height="130"/></g>
+    <g fill="#ffd98a" opacity=".85"><rect x="28" y="372" width="6" height="8"/><rect x="44" y="392" width="6" height="8"/><rect x="74" y="344" width="6" height="8"/>
+      <rect x="86" y="370" width="6" height="8"/><rect x="246" y="368" width="6" height="8"/><rect x="290" y="398" width="6" height="8"/><rect x="314" y="420" width="6" height="8"/></g>
+    <g stroke="#173b2a" stroke-width="5" fill="none"><path d="M178 520 q4 -60 -6 -92"/><path d="M322 520 q-2 -52 6 -84"/></g>
+    <g fill="#1f6b46"><path d="M172 430 q-30 -6 -44 14 q26 -8 44 -8z"/><path d="M172 430 q30 -8 44 12 q-26 -6 -44 -6z"/><path d="M172 430 q-8 -26 -32 -30 q20 12 26 30z"/>
+      <path d="M328 438 q-28 -6 -40 12 q24 -8 40 -8z"/><path d="M328 438 q28 -8 40 10 q-24 -6 -40 -6z"/></g>
+    <rect x="12" y="510" width="336" height="218" fill="#2d3238"/>
+    <rect x="12" y="510" width="336" height="10" fill="#3d434b"/>
+    <line class="lane" x1="12" y1="600" x2="348" y2="600" stroke="#ffd23f" stroke-width="6" stroke-dasharray="20 16"/>
+    <g class="car">
+      <path d="M40 586 q8 -30 40 -32 l58 0 q24 2 36 30 l14 4 q6 2 6 10 l0 14 l-164 0 l0 -16 q0 -8 10 -10z" fill="#ff3b5c"/>
+      <path d="M86 560 l44 0 q16 2 24 22 l-82 0z" fill="#bfe6ff" opacity=".9"/>
+      <circle cx="74" cy="614" r="15" fill="#111"/><circle cx="74" cy="614" r="6" fill="#9aa0a6"/>
+      <circle cx="160" cy="614" r="15" fill="#111"/><circle cx="160" cy="614" r="6" fill="#9aa0a6"/>
+      <rect x="182" y="590" width="10" height="6" rx="2" fill="#fff6b0"/>
+    </g>
+    <circle cx="62" cy="676" r="34" fill="#11151c" stroke="#fff" stroke-opacity=".7" stroke-width="2"/>
+    <path d="M44 690 l12 -24 l14 10 l12 -20" fill="none" stroke="#5aa9ff" stroke-width="3"/><circle cx="62" cy="676" r="4" fill="#ff3b5c"/>
+    <g fill="#fff" opacity=".9"><path d="M262 266 l4 9 l10 1 l-7 7 l2 10 l-9 -5 l-9 5 l2 -10 l-7 -7 l10 -1z"/><path d="M290 266 l4 9 l10 1 l-7 7 l2 10 l-9 -5 l-9 5 l2 -10 l-7 -7 l10 -1z"/></g>
+  </g>
+  <rect x="12" y="241" width="336" height="487" fill="url(#b2shade)"/>
+  <rect class="flash" x="12" y="241" width="336" height="487" fill="#fff"/>
+  <rect x="44" y="34" width="272" height="66" rx="10" fill="#fff"/>
+  <text x="180" y="62" text-anchor="middle" class="ui" style="font-size:20px;font-weight:900;fill:#0b0d12">HE DID NOT EXPECT</text>
+  <text x="180" y="88" text-anchor="middle" class="ui" style="font-size:20px;font-weight:900;fill:#0b0d12">THAT ENDING</text>
+  <text x="180" y="472" text-anchor="middle" class="ui" style="font-size:34px;font-weight:900;paint-order:stroke;stroke:#0b0d12;stroke-width:8px;stroke-linejoin:round">
+    <tspan class="w1 fb" fill="#fff">NO </tspan><tspan class="w2 fb" fill="#fff">WAY </tspan><tspan class="w3 fb" fill="#fff">BRO</tspan></text>
+  <g class="ui" style="fill:#fff;font-size:11px;font-weight:700" text-anchor="middle">
+    <g transform="translate(316,470)"><g class="heart"><path d="M0 8 C-14 -6 -6 -18 0 -9 C6 -18 14 -6 0 8z" fill="#ff3b5c"/></g></g>
+    <text x="316" y="494">1.2M</text>
+    <path d="M304 518 h24 a4 4 0 0 1 4 4 v14 a4 4 0 0 1 -4 4 h-14 l-8 7 v-7 h-2 a4 4 0 0 1 -4 -4 v-14 a4 4 0 0 1 4 -4z" fill="#fff" opacity=".95"/>
+    <text x="316" y="560">8.4K</text>
+    <path d="M306 584 l20 -9 l0 6 q-14 2 -18 14 q6 -8 18 -7 l0 6z" fill="#fff"/>
+    <text x="316" y="612">Share</text>
+    <rect x="303" y="628" width="26" height="26" rx="7" fill="none" stroke="#fff" stroke-width="3"/><circle cx="316" cy="641" r="5" fill="#fff"/>
+  </g>
+  <circle cx="34" cy="664" r="13" fill="#7c5cff"/><text x="34" y="669" text-anchor="middle" class="ui" style="font-size:12px;font-weight:900;fill:#fff">Y</text>
+  <text x="54" y="669" class="ui" style="font-size:13px;font-weight:800;fill:#fff">@yourchannel</text>
+  <rect x="158" y="653" width="78" height="24" rx="12" fill="#fff"/><text x="197" y="669" text-anchor="middle" class="ui" style="font-size:12px;font-weight:800;fill:#0b0d12">Subscribe</text>
+  <text x="24" y="700" class="ui" style="font-size:12.5px;font-weight:600;fill:#e9edf5">He did not expect that ending #gaming #shorts</text>
+  <rect x="12" y="718" width="336" height="4" fill="#ffffff" opacity=".25"/>
+  <rect class="prog" x="12" y="718" width="336" height="4" fill="#ff1f45" style="transform-origin:12px 720px"/>
+  <text x="40" y="34" class="ui" style="font-size:13px;font-weight:800;fill:#fff">9:41</text>
+  <rect x="300" y="24" width="24" height="11" rx="3" fill="none" stroke="#fff" stroke-width="1.6"/><rect x="302" y="26" width="17" height="7" rx="1.5" fill="#fff"/>
+  <g fill="#fff"><rect x="276" y="30" width="3" height="5"/><rect x="281" y="27" width="3" height="8"/><rect x="286" y="24" width="3" height="11"/></g>
+  <rect x="134" y="20" width="92" height="26" rx="13" fill="#000"/>
+</g>
+<rect x="6" y="6" width="348" height="728" rx="50" fill="none" stroke="#ffffff" stroke-opacity=".08" stroke-width="2"/>
+</g></g>
+<g transform="translate(1095,52) scale(.48)"><g class="ph3"><g transform="rotate(9 180 370)">
+<defs>
+  <linearGradient id="b3edge" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5b6475"/><stop offset=".5" stop-color="#1a1e27"/><stop offset="1" stop-color="#454c5c"/></linearGradient>
+  <linearGradient id="b3room" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4a1240"/><stop offset="1" stop-color="#1a0b33"/></linearGradient>
+  <linearGradient id="b3sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7a8cff"/><stop offset=".55" stop-color="#ff8fb1"/><stop offset="1" stop-color="#c86bff"/></linearGradient>
+  <linearGradient id="b3shade" x1="0" y1="0" x2="0" y2="1"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".65"/></linearGradient>
+  <radialGradient id="b3led" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#ff5dd2" stop-opacity=".8"/><stop offset="1" stop-color="#ff5dd2" stop-opacity="0"/></radialGradient>
+  <clipPath id="b3scr"><rect x="12" y="12" width="336" height="716" rx="44"/></clipPath>
+</defs>
+<rect x="-3" y="90" width="4" height="54" rx="2" fill="#2a2f3a"/><rect x="-3" y="160" width="4" height="80" rx="2" fill="#2a2f3a"/><rect x="359" y="140" width="4" height="96" rx="2" fill="#2a2f3a"/>
+<rect x="0" y="0" width="360" height="740" rx="56" fill="url(#b3edge)"/>
+<rect x="6" y="6" width="348" height="728" rx="50" fill="#07080b"/>
+<g clip-path="url(#b3scr)">
+  <rect x="12" y="12" width="336" height="716" fill="#000"/>
+  <rect x="12" y="12" width="336" height="228" fill="url(#b3room)"/>
+  <circle cx="300" cy="70" r="90" fill="url(#b3led)"/>
+  <rect x="28" y="64" width="300" height="3" rx="1.5" fill="#ff5dd2" opacity=".75"/><rect x="28" y="168" width="110" height="5" rx="2" fill="#2b2140"/>
+  <rect x="40" y="132" width="18" height="36" rx="3" fill="#5ce1e6" opacity=".55"/><rect x="62" y="122" width="14" height="46" rx="3" fill="#ffd23f" opacity=".55"/>
+  <path d="M118 240 q62 -70 124 0z" fill="#1e1e28"/>
+  <path d="M132 240 q48 -52 96 0z" fill="#ff3b5c"/>
+  <circle cx="180" cy="132" r="40" fill="#e3a77e"/>
+  <path d="M140 124 q40 -62 80 0 q-6 -30 -40 -32 q-34 2 -40 32z" fill="#2b1d14"/>
+  <path d="M134 128 a46 46 0 0 1 92 0" fill="none" stroke="#14151c" stroke-width="9"/>
+  <rect x="124" y="122" width="16" height="34" rx="7" fill="#14151c"/><rect x="220" y="122" width="16" height="34" rx="7" fill="#14151c"/>
+  <path d="M130 150 q-22 26 6 46" fill="none" stroke="#14151c" stroke-width="4"/><circle cx="138" cy="196" r="5" fill="#14151c"/>
+  <g class="brow"><rect x="160" y="114" width="14" height="4" rx="2" fill="#2b1d14"/><rect x="186" y="114" width="14" height="4" rx="2" fill="#2b1d14"/></g>
+  <ellipse cx="167" cy="128" rx="4.5" ry="6" fill="#16110d"/><ellipse cx="193" cy="128" rx="4.5" ry="6" fill="#16110d"/>
+  <g class="mouth"><ellipse cx="180" cy="152" rx="11" ry="9" fill="#5a1717"/></g>
+  <rect x="24" y="214" width="44" height="16" rx="4" fill="#ff1f45"/><text x="46" y="226" text-anchor="middle" class="ui live" style="font-size:10px;font-weight:900;fill:#fff">LIVE</text>
+  
+  <rect x="12" y="238" width="336" height="3" fill="#ffd23f" opacity=".85"/>
+  <g class="punch">
+    <rect x="12" y="241" width="336" height="487" fill="url(#b3sky)"/>
+    <circle cx="250" cy="420" r="46" fill="#fff3c4" opacity=".9"/>
+    <g fill="#2b2d52"><rect x="20" y="360" width="42" height="150"/><rect x="66" y="330" width="34" height="180"/><rect x="104" y="390" width="50" height="120"/>
+      <rect x="236" y="350" width="38" height="160"/><rect x="278" y="380" width="62" height="130"/></g>
+    <g fill="#ffd98a" opacity=".85"><rect x="28" y="372" width="6" height="8"/><rect x="44" y="392" width="6" height="8"/><rect x="74" y="344" width="6" height="8"/>
+      <rect x="86" y="370" width="6" height="8"/><rect x="246" y="368" width="6" height="8"/><rect x="290" y="398" width="6" height="8"/><rect x="314" y="420" width="6" height="8"/></g>
+    <g stroke="#173b2a" stroke-width="5" fill="none"><path d="M178 520 q4 -60 -6 -92"/><path d="M322 520 q-2 -52 6 -84"/></g>
+    <g fill="#1f6b46"><path d="M172 430 q-30 -6 -44 14 q26 -8 44 -8z"/><path d="M172 430 q30 -8 44 12 q-26 -6 -44 -6z"/><path d="M172 430 q-8 -26 -32 -30 q20 12 26 30z"/>
+      <path d="M328 438 q-28 -6 -40 12 q24 -8 40 -8z"/><path d="M328 438 q28 -8 40 10 q-24 -6 -40 -6z"/></g>
+    <rect x="12" y="510" width="336" height="218" fill="#2d3238"/>
+    <rect x="12" y="510" width="336" height="10" fill="#3d434b"/>
+    <line class="lane" x1="12" y1="600" x2="348" y2="600" stroke="#ffd23f" stroke-width="6" stroke-dasharray="20 16"/>
+    <g class="car">
+      <path d="M40 586 q8 -30 40 -32 l58 0 q24 2 36 30 l14 4 q6 2 6 10 l0 14 l-164 0 l0 -16 q0 -8 10 -10z" fill="#ffd23f"/>
+      <path d="M86 560 l44 0 q16 2 24 22 l-82 0z" fill="#bfe6ff" opacity=".9"/>
+      <circle cx="74" cy="614" r="15" fill="#111"/><circle cx="74" cy="614" r="6" fill="#9aa0a6"/>
+      <circle cx="160" cy="614" r="15" fill="#111"/><circle cx="160" cy="614" r="6" fill="#9aa0a6"/>
+      <rect x="182" y="590" width="10" height="6" rx="2" fill="#fff6b0"/>
+    </g>
+    <circle cx="62" cy="676" r="34" fill="#11151c" stroke="#fff" stroke-opacity=".7" stroke-width="2"/>
+    <path d="M44 690 l12 -24 l14 10 l12 -20" fill="none" stroke="#5aa9ff" stroke-width="3"/><circle cx="62" cy="676" r="4" fill="#ff3b5c"/>
+    <g fill="#fff" opacity=".9"><path d="M262 266 l4 9 l10 1 l-7 7 l2 10 l-9 -5 l-9 5 l2 -10 l-7 -7 l10 -1z"/><path d="M290 266 l4 9 l10 1 l-7 7 l2 10 l-9 -5 l-9 5 l2 -10 l-7 -7 l10 -1z"/></g>
+  </g>
+  <rect x="12" y="241" width="336" height="487" fill="url(#b3shade)"/>
+  <rect class="flash" x="12" y="241" width="336" height="487" fill="#fff"/>
+  <rect x="44" y="34" width="272" height="66" rx="10" fill="#fff"/>
+  <text x="180" y="62" text-anchor="middle" class="ui" style="font-size:20px;font-weight:900;fill:#0b0d12">THE CLUTCH NO</text>
+  <text x="180" y="88" text-anchor="middle" class="ui" style="font-size:20px;font-weight:900;fill:#0b0d12">ONE SAW</text>
+  <text x="180" y="472" text-anchor="middle" class="ui" style="font-size:34px;font-weight:900;paint-order:stroke;stroke:#0b0d12;stroke-width:8px;stroke-linejoin:round">
+    <tspan class="w1 fb" fill="#fff">LET'S </tspan><tspan class="w2 fb" fill="#fff">GO </tspan><tspan class="w3 fb" fill="#fff">!!</tspan></text>
+  <g class="ui" style="fill:#fff;font-size:11px;font-weight:700" text-anchor="middle">
+    <g transform="translate(316,470)"><g class="heart"><path d="M0 8 C-14 -6 -6 -18 0 -9 C6 -18 14 -6 0 8z" fill="#ff3b5c"/></g></g>
+    <text x="316" y="494">2.4M</text>
+    <path d="M304 518 h24 a4 4 0 0 1 4 4 v14 a4 4 0 0 1 -4 4 h-14 l-8 7 v-7 h-2 a4 4 0 0 1 -4 -4 v-14 a4 4 0 0 1 4 -4z" fill="#fff" opacity=".95"/>
+    <text x="316" y="560">8.4K</text>
+    <path d="M306 584 l20 -9 l0 6 q-14 2 -18 14 q6 -8 18 -7 l0 6z" fill="#fff"/>
+    <text x="316" y="612">Share</text>
+    <rect x="303" y="628" width="26" height="26" rx="7" fill="none" stroke="#fff" stroke-width="3"/><circle cx="316" cy="641" r="5" fill="#fff"/>
+  </g>
+  <circle cx="34" cy="664" r="13" fill="#7c5cff"/><text x="34" y="669" text-anchor="middle" class="ui" style="font-size:12px;font-weight:900;fill:#fff">Y</text>
+  <text x="54" y="669" class="ui" style="font-size:13px;font-weight:800;fill:#fff">@yourchannel</text>
+  <rect x="158" y="653" width="78" height="24" rx="12" fill="#fff"/><text x="197" y="669" text-anchor="middle" class="ui" style="font-size:12px;font-weight:800;fill:#0b0d12">Subscribe</text>
+  <text x="24" y="700" class="ui" style="font-size:12.5px;font-weight:600;fill:#e9edf5">He did not expect that ending #gaming #shorts</text>
+  <rect x="12" y="718" width="336" height="4" fill="#ffffff" opacity=".25"/>
+  <rect class="prog" x="12" y="718" width="336" height="4" fill="#ff1f45" style="transform-origin:12px 720px"/>
+  <text x="40" y="34" class="ui" style="font-size:13px;font-weight:800;fill:#fff">9:41</text>
+  <rect x="300" y="24" width="24" height="11" rx="3" fill="none" stroke="#fff" stroke-width="1.6"/><rect x="302" y="26" width="17" height="7" rx="1.5" fill="#fff"/>
+  <g fill="#fff"><rect x="276" y="30" width="3" height="5"/><rect x="281" y="27" width="3" height="8"/><rect x="286" y="24" width="3" height="11"/></g>
+  <rect x="134" y="20" width="92" height="26" rx="13" fill="#000"/>
+</g>
+<rect x="6" y="6" width="348" height="728" rx="50" fill="none" stroke="#ffffff" stroke-opacity=".08" stroke-width="2"/>
+</g></g></g>
 </svg>
