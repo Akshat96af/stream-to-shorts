@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="420" viewBox="0 0 1280 420" role="img" aria-label="stream-to-shorts by Akshat96af">
+<!-- stream-to-shorts by Akshat96af. Copyright (c) 2026 Akshat96af. All rights reserved. -->
+<title>stream-to-shorts by Akshat96af</title>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#0b0d14"/><stop offset="0.55" stop-color="#151a2e"/><stop offset="1" stop-color="#2a1030"/>
+  </linearGradient>
+  <linearGradient id="hot" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#ffd23f"/><stop offset="0.5" stop-color="#ff5d8f"/><stop offset="1" stop-color="#7c5cff"/>
+  </linearGradient>
+  <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#ff5d8f" stop-opacity=".55"/><stop offset="1" stop-color="#ff5d8f" stop-opacity="0"/></radialGradient>
+  <clipPath id="ph"><rect x="0" y="0" width="150" height="266" rx="18"/></clipPath>
+</defs>
+<style>
+  .t{font-family:'Segoe UI',Inter,Roboto,Helvetica,Arial,sans-serif;font-weight:900;font-size:76px;fill:#fff;letter-spacing:-1px}
+  .s{font-family:'Segoe UI',Inter,Roboto,Helvetica,Arial,sans-serif;font-weight:600;font-size:26px;fill:#c9d1e6}
+  .b{font-family:'Segoe UI',Inter,Roboto,Helvetica,Arial,sans-serif;font-weight:700;font-size:16px;fill:#8b95a8;letter-spacing:3px}
+  .pill{font-family:'Segoe UI',Inter,Roboto,Helvetica,Arial,sans-serif;font-weight:800;font-size:15px;fill:#111}
+  .orb{animation:float 7s ease-in-out infinite} .orb2{animation:float 9s ease-in-out infinite reverse}
+  .bar{animation:grow 3.2s ease-in-out infinite}
+  .ph1{animation:bob 4s ease-in-out infinite} .ph2{animation:bob 4s ease-in-out infinite .6s} .ph3{animation:bob 4s ease-in-out infinite 1.2s}
+  .w1{animation:hl 2.4s steps(1) infinite} .w2{animation:hl 2.4s steps(1) infinite .8s} .w3{animation:hl 2.4s steps(1) infinite 1.6s}
+  .rec{animation:blink 1.2s steps(2) infinite}
+  @keyframes float{0%,100%{transform:translate(0,0)}50%{transform:translate(30px,-18px)}}
+  @keyframes grow{0%{transform:scaleX(.15)}55%{transform:scaleX(1)}100%{transform:scaleX(.15)}}
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+  @keyframes hl{0%{fill:#ffd23f}33%{fill:#ffffff}}
+  @keyframes blink{50%{opacity:0}}
+</style>
+<rect width="1280" height="420" fill="url(#bg)"/>
+<circle class="orb" cx="1000" cy="80" r="220" fill="url(#glow)"/>
+<circle class="orb2" cx="200" cy="420" r="200" fill="url(#glow)" opacity=".6"/>
+<text x="70" y="70" class="b">AI SKILL  ·  STREAM CLIPPING  ·  1080x1920 60FPS</text>
+<text x="66" y="165" class="t">stream-to-shorts</text>
+<rect class="bar" x="70" y="186" width="520" height="8" rx="4" fill="url(#hot)" style="transform-origin:70px 190px"/>
+<text x="70" y="240" class="s">Long streams in. Scroll-stopping Shorts out.</text>
+<text x="70" y="276" class="s" style="font-size:20px;fill:#8b95a8">Finds the moments viewers rewatch. Edits them like a pro.</text>
+<g transform="translate(70,316)">
+  <rect width="150" height="38" rx="19" fill="#ffd23f"/><text x="75" y="25" text-anchor="middle" class="pill">Hook on frame 1</text>
+  <rect x="164" width="170" height="38" rx="19" fill="#ff5d8f"/><text x="249" y="25" text-anchor="middle" class="pill">Word-pop captions</text>
+  <rect x="348" width="150" height="38" rx="19" fill="#7c5cff"/><text x="423" y="25" text-anchor="middle" class="pill" style="fill:#fff">Facecam layout</text>
+  <rect x="512" width="130" height="38" rx="19" fill="#3ddc84"/><text x="577" y="25" text-anchor="middle" class="pill">Auto QC</text>
+</g>
+<text x="70" y="396" class="b" style="font-size:13px;letter-spacing:2px">BY AKSHAT96AF</text>
+<g transform="translate(760,70)">
+  <g class="ph1"><g transform="rotate(-8 75 133)">
+    <rect width="150" height="266" rx="18" fill="#1b2130" stroke="#2f3954" stroke-width="3"/>
+    <g clip-path="url(#ph)"><rect width="150" height="80" fill="#3a2a55"/><circle cx="75" cy="48" r="20" fill="#ffb38a"/>
+    <rect y="80" width="150" height="186" fill="#1f6f8b"/><rect y="180" width="150" height="86" fill="#2c8a5a"/></g>
+    <rect x="18" y="14" width="114" height="18" rx="3" fill="#fff"/><rect x="26" y="20" width="98" height="6" rx="3" fill="#111"/>
+  </g></g>
+  <g transform="translate(150,-20)"><g class="ph2">
+    <rect width="150" height="266" rx="18" fill="#1b2130" stroke="#ffd23f" stroke-width="3"/>
+    <g clip-path="url(#ph)"><rect width="150" height="80" fill="#55304a"/><circle cx="75" cy="48" r="20" fill="#e0a27a"/>
+    <rect y="80" width="150" height="186" fill="#8b3a3a"/><rect y="200" width="150" height="66" fill="#3a3f8b"/></g>
+    <rect x="16" y="14" width="118" height="18" rx="3" fill="#fff"/><rect x="24" y="20" width="102" height="6" rx="3" fill="#111"/>
+    <text x="75" y="232" text-anchor="middle" style="font-family:'Segoe UI',Inter,Roboto,Helvetica,Arial,sans-serif;font-weight:900;font-size:15px">
+      <tspan class="w1" fill="#fff">NO </tspan><tspan class="w2" fill="#fff">WAY </tspan><tspan class="w3" fill="#fff">BRO</tspan></text>
+    <circle class="rec" cx="134" cy="252" r="5" fill="#ff3b5c"/>
+  </g></g>
+  <g transform="translate(305,10)"><g class="ph3"><g transform="rotate(8 75 133)">
+    <rect width="150" height="266" rx="18" fill="#1b2130" stroke="#2f3954" stroke-width="3"/>
+    <g clip-path="url(#ph)"><rect width="150" height="80" fill="#2a4055"/><circle cx="75" cy="48" r="20" fill="#c98b62"/>
+    <rect y="80" width="150" height="186" fill="#6b5a2e"/><rect y="170" width="150" height="96" fill="#2e5a6b"/></g>
+    <rect x="22" y="14" width="106" height="18" rx="3" fill="#fff"/><rect x="30" y="20" width="90" height="6" rx="3" fill="#111"/>
+  </g></g></g>
+</g>
+</svg>

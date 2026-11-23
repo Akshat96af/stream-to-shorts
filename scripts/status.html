@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Clip Factory &middot; stream-to-shorts by Akshat96af⁠​‌​​​​​‌​‌‌​‌​‌‌​‌‌‌​​‌‌​‌‌​‌​​​​‌‌​​​​‌​‌‌‌​‌​​​​‌‌‌​​‌​​‌‌​‌‌​​‌‌​​​​‌​‌‌​​‌‌​⁠</title>
+<meta name="author" content="Akshat96af">
+<style>
+:root{--bg:#0b0d12;--card:#141821;--card2:#1b2130;--line:#262e40;--t:#e9edf5;--m:#8b95a8;--a:#ffd23f;--ok:#3ddc84;--warn:#ffb020;--bad:#ff5470;--live:#ff3b5c;--blue:#5aa9ff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--t);font:14px/1.45 system-ui,Segoe UI,Roboto,sans-serif}
+header{position:sticky;top:0;z-index:5;background:rgba(11,13,18,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:14px 20px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+h1{font-size:18px;margin:0;letter-spacing:.5px}h1 b{color:var(--a)}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;background:var(--card2);border:1px solid var(--line);font-weight:600;text-transform:uppercase;font-size:12px;letter-spacing:.6px}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--m)}.busy .dot{background:var(--a);animation:p 1.2s infinite}
+@keyframes p{50%{opacity:.25}}
+.upd{margin-left:auto;color:var(--m);font-size:12px}
+main{padding:18px 20px 40px;max-width:1500px;margin:auto}
+.grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-bottom:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.k{color:var(--m);font-size:12px;text-transform:uppercase;letter-spacing:.6px}.v{font-size:26px;font-weight:800;margin-top:2px}.s{color:var(--m);font-size:12px}
+.bar{height:8px;border-radius:9px;background:var(--card2);overflow:hidden;margin-top:8px}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--ok),var(--a),var(--bad))}
+.now{display:grid;grid-template-columns:2fr 1fr;gap:12px;margin-bottom:16px}@media(max-width:900px){.now{grid-template-columns:1fr}}
+.stage{font-size:22px;font-weight:800}.note{margin-top:4px}
+.steps{display:flex;gap:6px;margin-top:12px;flex-wrap:wrap}.steps span{padding:5px 10px;border-radius:8px;background:var(--card2);color:var(--m);font-size:12px;font-weight:600}
+.steps span.on{background:var(--a);color:#111}.steps span.done{color:var(--ok)}
+h2{font-size:14px;text-transform:uppercase;letter-spacing:.8px;color:var(--m);margin:22px 0 10px}
+.shorts{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.sh{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.th{position:relative;aspect-ratio:9/16;background:#000 center/cover no-repeat;cursor:pointer}
+.th .st{position:absolute;top:8px;left:8px}.th .du{position:absolute;bottom:8px;right:8px;background:rgba(0,0,0,.7);padding:2px 7px;border-radius:6px;font-size:12px}
+.badge{padding:3px 8px;border-radius:6px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.5px}
+.posted{background:var(--ok);color:#06210f}.queued{background:var(--a);color:#2a2000}.rendered{background:var(--card2);color:var(--t);border:1px solid var(--line)}
+.bd{padding:10px 12px;display:flex;flex-direction:column;gap:6px;flex:1}.tt{font-weight:700;font-size:13px;line-height:1.3}
+.meta{display:flex;flex-wrap:wrap;gap:5px}.tag{font-size:11px;padding:2px 7px;border-radius:6px;background:var(--card2);color:var(--m)}
+.tag.ok{color:var(--ok)}.tag.bad{color:var(--bad)}
+.lk{display:flex;gap:10px;margin-top:auto;font-size:12px}.lk a{color:var(--blue);text-decoration:none}.lk a:hover{text-decoration:underline}
+pre{margin:0;white-space:pre-wrap;word-break:break-word;font:12px/1.5 ui-monospace,Consolas,monospace;color:#c9d1e0;max-height:260px;overflow:auto}
+pre .e{color:var(--bad)}
+table{width:100%;border-collapse:collapse;font-size:13px}td{padding:7px 4px;border-bottom:1px solid var(--line)}td:last-child{text-align:right;color:var(--m)}
+.live{color:var(--live);font-weight:800}
+#modal{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;z-index:9}#modal.on{display:flex}
+#modal video,#modal img{max-height:92vh;max-width:92vw;border-radius:12px}
+.empty{color:var(--m);padding:20px;text-align:center}
+</style></head><body>
+<header><h1>CLIP <b>FACTORY</b></h1><span id="pill" class="pill"><span class="dot"></span><span id="pst">idle</span></span>
+<span class="pill" id="rend" style="display:none">Rendering now</span><span class="upd" id="upd">loading...</span></header>
+<main>
+<div class="grid4">
+ <div class="card"><div class="k">Uploads, last 24 h</div><div class="v" id="used">-</div><div class="bar"><i id="usedbar" style="width:0"></i></div><div class="s" id="cap"></div></div>
+ <div class="card"><div class="k">Since last post</div><div class="v" id="lp">-</div><div class="s">resets when a Short is published</div></div>
+ <div class="card"><div class="k">Posted (all time)</div><div class="v" id="posted">-</div><div class="s" id="queued"></div></div>
+ <div class="card"><div class="k">Rendered Shorts</div><div class="v" id="nshorts">-</div><div class="s" id="lastmade"></div></div>
+</div>
+<div class="now">
+ <div class="card"><div class="k">Now</div><div class="stage" id="stage">-</div><div class="note" id="note"></div>
+  <div class="s" id="elapsed"></div><div class="steps" id="steps"></div></div>
+ <div class="card"><div class="k">Recordings / sources</div><table id="rec"></table></div>
+</div>
+<h2>Shorts (newest first, click to play)</h2><div class="shorts" id="shorts"></div>
+<div id="trashbox" style="display:none"><h2>Trash (moved out of final/, restore any time)</h2><div class="card"><table id="trash"></table></div></div>
+<h2>Log</h2><div class="card"><div class="k" id="logname"></div><pre id="log"></pre></div>
+<p class="s">stream-to-shorts by Akshat96af &middot; Reads status.js (written by status.py). No server, nothing leaves this PC. Times are typical ranges, not promises.</p>
+</main>
+<div id="modal"></div>
+<script>
+const $=id=>document.getElementById(id),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const dur=s=>{s=Math.max(0,Math.floor(s));const h=Math.floor(s/3600),m=Math.floor(s/60)%60;return (h?h+' h ':'')+m+' min'+(h?'':' '+String(s%60).padStart(2,'0')+' s')};
+const STEPS=['scan','render','upload','check','idle'];let SH=[];
+function close_(){const m=$('modal');m.classList.remove('on');m.innerHTML=''}
+function show(i,kind){const x=SH[i];if(!x)return;const m=$('modal');m.innerHTML=kind==='v'?`<video src="${encodeURI(x.file)}" controls autoplay></video>`:`<img src="${encodeURI(x.sheet)}" alt="frames">`;m.classList.add('on')}
+$('modal').onclick=e=>{if(e.target.id==='modal')close_()};document.addEventListener('keydown',e=>{if(e.key==='Escape')close_()});
+function draw(){
+ const S=window.S||{},D=window.D||{},n=Date.now()/1e3,st=S.stage||'idle';
+ $('pill').className='pill '+(st==='idle'?'':'busy');$('pst').textContent=st;
+ $('rend').style.display=D.rendering?'':'none';
+ $('upd').textContent=D.updated?'data '+dur(n-D.updated)+' old':'no data yet: run python status.py';
+ $('stage').textContent=st.toUpperCase();$('note').textContent=S.note||'';
+ $('elapsed').textContent=S.since?('in this stage '+dur(n-S.since)+(S.typical?' (typically '+S.typical+')':'')):'';
+ $('steps').innerHTML=STEPS.map((x,i)=>`<span class="${x===st?'on':(STEPS.indexOf(st)>i?'done':'')}">${x}</span>`).join('');
+ $('lp').textContent=S.last_post?dur(n-S.last_post):'-';
+ const u=D.used24||0,c=D.cap||30;$('used').textContent=u+' / '+c;$('usedbar').style.width=Math.min(100,100*u/c)+'%';
+ $('cap').textContent=u>=c?'cap reached':(c-u)+' left (Studio may stop earlier)';
+ $('posted').textContent=D.posted??'-';$('queued').textContent=(D.queued||0)+' waiting to upload';
+ SH=D.shorts||[];$('nshorts').textContent=SH.length;$('lastmade').textContent=SH[0]?'latest '+SH[0].made:'';
+ $('rec').innerHTML=(D.rec||[]).map(r=>`<tr><td>${r.live?'<span class="live">● REC</span> ':''}${esc(r.name)}</td><td>${r.gb} GB · ${esc(r.at)}</td></tr>`).join('')||'<tr><td class="s">none</td></tr>';
+ $('shorts').innerHTML=SH.length?SH.map((x,i)=>{
+  const qc=x.qc_ok==null?'':(x.qc_ok?`<span class="tag ok">QC ok ${x.lufs} LUFS</span>`:`<span class="tag bad" title="${esc((x.issues||[]).join(', '))}">QC ${esc((x.issues||[])[0]||'fail')}</span>`);
+  return `<div class="sh"><div class="th" style="background-image:url('${encodeURI(x.cover)}')" onclick="show(${i},'v')">
+   <span class="st badge ${x.state}">${x.state}</span>${x.dur?`<span class="du">${Math.round(x.dur)} s</span>`:''}</div>
+   <div class="bd"><div class="tt">${esc(x.title)}</div><div class="s">${x.at?'posted '+esc(x.at.replace('T',' ')):'made '+esc(x.made)}</div>
+   <div class="meta">${qc}${x.layout?`<span class="tag">${esc(x.layout)}</span>`:''}${x.music?`<span class="tag" title="${esc(x.music)}">♪ music</span>`:''}${(x.sfx||[]).length?`<span class="tag">${x.sfx.length} sfx</span>`:''}</div>
+   <div class="lk"><a href="#" onclick="show(${i},'v');return false">Play</a><a href="#" onclick="show(${i},'f');return false">Frames</a>${x.url?`<a href="${esc(x.url)}" target="_blank" rel="noopener">YouTube</a>`:''}${LIVE?`<a href="#" style="margin-left:auto;color:var(--bad)" onclick="act('trash',${i});return false">Delete</a>`:''}</div></div></div>`}).join(''):'<div class="empty">No Shorts yet</div>';
+ const T=D.trash||[];$('trashbox').style.display=LIVE&&T.length?'':'none';
+ $('trash').innerHTML=T.map((s,i)=>`<tr><td>${esc(s)}</td><td><a href="#" style="color:var(--blue)" onclick="act('restore',${i});return false">Restore</a></td></tr>`).join('');
+ $('logname').textContent=D.log_name||'';
+ $('log').innerHTML=(D.log||[]).map(l=>/error|fail|traceback/i.test(l)?`<span class="e">${esc(l)}</span>`:esc(l)).join('\n');
+}
+const LIVE=location.protocol.startsWith('http');  // Delete/Restore need the local server: python dash.py
+if(!LIVE)$('upd').title='Open via python dash.py for the Delete button';
+async function act(kind,i){
+ const stem=kind==='trash'?SH[i]&&SH[i].stem:(window.D.trash||[])[i];if(!stem)return;
+ if(kind==='trash'&&!confirm('Move this Short to the trash?\n\n'+stem+'\n\nIt leaves final/ (restore any time from Trash). YouTube is NOT changed: delete it there in Studio if it was posted.'))return;
+ const r=await fetch('/api/'+kind,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({stem})}).then(r=>r.json()).catch(e=>({error:String(e)}));
+ if(r.error)alert(r.error);last='';refresh();}
+let last='';
+function refresh(){const s=document.createElement('script');s.src='status.js?'+Date.now();s.onload=()=>{const k=JSON.stringify([window.S,window.D&&window.D.updated]);if(k!==last){last=k;if(!$('modal').classList.contains('on'))draw()}s.remove()};s.onerror=()=>s.remove();document.body.append(s)}
+refresh();setInterval(refresh,5000);setInterval(()=>{const S=window.S||{},n=Date.now()/1e3;if(S.since)$('elapsed').textContent='in this stage '+dur(n-S.since)+(S.typical?' (typically '+S.typical+')':'');if(S.last_post)$('lp').textContent=dur(n-S.last_post)},1000);
+</script></body></html>

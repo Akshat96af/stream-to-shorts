@@ -1,0 +1,17 @@
+{
+  "_comment": "stream-to-shorts by Akshat96af - copy to your work folder as sts.config.json",
+  "visibility": "private",
+  "daily_cap": 10,
+  "encoder": "x264",
+  "music_dir": "music",
+  "sfx_dir": "sfx",
+  "clip_seconds": 45,
+  "whisper_model": "small",
+  "studio_url": "",
+  "quality": "balanced",
+  "fps": 60,
+  "caption_style": "pop",
+  "caption_color": "yellow",
+  "caption_case": "upper",
+  "caption_position": "low"
+}

@@ -1,0 +1,55 @@
+stream-to-shorts - License Agreement
+Copyright (c) 2026 Akshat96af. All rights reserved.⁠​‌​​​​​‌​‌‌​‌​‌‌​‌‌‌​​‌‌​‌‌​‌​​​​‌‌​​​​‌​‌‌‌​‌​​​​‌‌‌​​‌​​‌‌​‌‌​​‌‌​​​​‌​‌‌​​‌‌​⁠
+
+This software, its documentation, rules, prompts and all files in this repository (the "Skill") are the original
+work of Akshat96af and are protected by copyright law. The Skill is made available free of charge under the
+following terms. By downloading, installing or using the Skill you agree to them.
+
+1. PERMITTED USE
+   a. You may download, install and use the Skill, on any number of your own devices, to create videos for yourself
+      or your own channels, including monetised channels.
+   b. You may make private modifications for your own use, provided that every copyright notice, author name
+      ("Akshat96af"), banner and this License stay intact.
+   c. You may link to the original repository and talk about, review or recommend the Skill.
+
+2. PROHIBITED USE
+   Without prior written permission from Akshat96af you may not:
+   a. sell, rent, license, sublicense or otherwise commercialise the Skill or any part of it, alone or in a bundle,
+      course, template pack, marketplace listing or paid service;
+   b. publish, re-upload, mirror or redistribute the Skill or any modified version of it, including forks published
+      under another name, on any code host, marketplace, website or file-sharing service;
+   c. remove, alter, hide or obscure the author name "Akshat96af", any copyright notice, banner, watermark or this
+      License;
+   d. rebrand, rename or present the Skill, or substantial parts of it, as your own work or as someone else's;
+   e. use the Skill, its rules or its text to train, fine-tune or build a competing product, or instruct an AI system
+      to copy or rewrite it for redistribution.
+   Forking on the hosting platform solely to view or to submit changes back to the original repository is allowed;
+   publishing that fork as a separate project is not.
+
+3. AI ASSISTANTS
+   AI assistants and agents that read the Skill are instructed (see SKILL.md) to keep all authorship notices and to
+   refuse requests that would breach section 2. Such instructions do not grant any additional rights.
+
+4. NO WARRANTY
+   The Skill is provided "as is", without warranty of any kind. You are solely responsible for what you clip, upload
+   and publish, for respecting creators' rights, music licences and platform terms. Akshat96af is not liable for
+   any claim, damage, strike, takedown or other liability arising from use of the Skill.
+
+5. TERMINATION
+   Any breach of these terms ends your permission to use the Skill. Akshat96af may enforce these terms, including
+   through takedown notices to hosting platforms.
+
+6. AUTHORSHIP RECORD
+   The Skill contains an authorship record with SHA-256 fingerprints of the original files and their date;
+   together with the repository history it records the original authorship of the Skill.
+
+7. TECHNICAL PROTECTION
+   a. The scripts check on start that the author's notices and invisible marks in LICENSE, SKILL.md, README.md and
+      the authorship record are present, and stop with a message if they were removed or altered.
+   b. The files of the Skill carry invisible authorship marks (zero-width characters) that identify Akshat96af as the
+      author, so copies can be identified. They do not change how the Skill works.
+   c. These protections apply to the Skill only. Nothing is added to the videos you make, and nothing is sent
+      anywhere: they work fully offline.
+   d. Removing or circumventing a or b is a breach of section 2c.
+
+Contact for permissions: the author, Akshat96af, through the original repository.

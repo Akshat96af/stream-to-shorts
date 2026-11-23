@@ -1,0 +1,6 @@
+# stream-to-shorts by Akshat96af - Python packages (ffmpeg must be installed separately)
+numpy
+faster-whisper==1.2.1
+av>=14,<17
+yt-dlp
+streamlink  # optional: live recording
